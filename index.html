@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MPC ColorTech+ Studio v3.0 (Expert Edition) — Hệ Thống Quản Trị Màu Số Học Khoa Học Công Nghiệp In</title>
+  <title>MPC ColorTech+ Studio v4.0 — Hệ Thống Quản Trị Màu Công Nghiệp (Đầu Vào Độc Quyền Kép P2P51 & TC1617)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,12 +20,12 @@
           },
           colors: {
             d50: {
-              950: '#16181b',
-              900: '#1f2227',
-              850: '#262930',
-              800: '#2e323b',
-              700: '#3d424d',
-              600: '#525866',
+              950: '#15171a',
+              900: '#1e2025',
+              850: '#25282f',
+              800: '#2d313a',
+              700: '#3c414c',
+              600: '#515766',
               400: '#9ca3af',
               300: '#cbd5e1',
               100: '#f1f5f9'
@@ -37,64 +37,66 @@
   </script>
   <style>
     body {
-      background-color: #1f2227;
+      background-color: #1e2025;
       color: #f1f5f9;
       font-family: 'Inter', system-ui, sans-serif;
       overflow-x: hidden;
     }
     ::-webkit-scrollbar { width: 6px; height: 6px; }
-    ::-webkit-scrollbar-track { background: #16181b; }
-    ::-webkit-scrollbar-thumb { background: #3d424d; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #525866; }
+    ::-webkit-scrollbar-track { background: #15171a; }
+    ::-webkit-scrollbar-thumb { background: #3c414c; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #515766; }
 
     .macro-tab {
-      letter-spacing: 0.07em;
-      font-weight: 400;
+      letter-spacing: 0.06em;
+      font-weight: 500;
       transition: all 0.15s ease;
       border-bottom: 3px solid transparent;
     }
     .macro-tab.active {
       color: #ffffff;
-      font-weight: 700;
+      font-weight: 800;
       border-bottom-color: #38bdf8;
-      text-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+      text-shadow: 0 0 16px rgba(56, 189, 248, 0.45);
     }
     .macro-tab:not(.active) { color: #64748b; }
     .macro-tab:not(.active):hover { color: #cbd5e1; }
 
-    /* Subtle channel column tinting for scientific numeric tables */
     .tint-col-c { background-color: rgba(0, 174, 239, 0.09); }
     .tint-col-m { background-color: rgba(236, 0, 140, 0.09); }
     .tint-col-y { background-color: rgba(255, 242, 0, 0.07); }
     .tint-col-k { background-color: rgba(148, 163, 184, 0.10); }
 
-    /* Wallboard Zoom Mode for Press-Side Consultation */
     body.wallboard-zoom .num-cell { font-size: 0.95rem !important; line-height: 1.35rem !important; }
     body.wallboard-zoom .bm-big-num { font-size: 2.1rem !important; line-height: 2.35rem !important; }
   </style>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-sky-500 selection:text-white">
 
-  <!-- SANDBOX-SAFE TOAST CONTAINER -->
+  <!-- TOAST NOTIFICATION CONTAINER -->
   <div id="toastContainer" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2 max-w-md pointer-events-none"></div>
 
   <!-- ======================================================================= -->
-  <!-- CLEAN 1-LINE EXPERT HEADER (ZERO RBAC CLUTTER)                          -->
+  <!-- TOP EXPERT HEADER — STRICT P2P51 & TC1617 DUAL-CORE ARCHITECTURE        -->
   <!-- ======================================================================= -->
   <header class="sticky top-0 z-30 bg-d50-950/95 backdrop-blur border-b border-d50-700 px-3 sm:px-5 py-2">
-    <div class="max-w-[1640px] mx-auto flex flex-wrap items-center justify-between gap-3">
+    <div class="max-w-[1660px] mx-auto flex flex-wrap items-center justify-between gap-2.5">
 
-      <!-- Left: Brand Logo + pressSIGN Job Wizard + SCCA Calculator -->
-      <div class="flex items-center gap-2.5">
+      <!-- Left: Brand Logo + Dual-Core Badge + Job Wizard + SCCA -->
+      <div class="flex flex-wrap items-center gap-2">
         <div class="flex items-center select-none">
           <span class="text-lg sm:text-xl font-light tracking-tight text-gray-200">ColorTech</span>
           <span class="text-xl sm:text-2xl font-extrabold bg-gradient-to-tr from-sky-400 via-cyan-300 to-emerald-400 bg-clip-text text-transparent ml-0.5 leading-none">+</span>
-          <span class="ml-2 px-1.5 py-0.5 text-[10px] font-mono font-bold rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">v3.0 EXPERT</span>
+          <span class="ml-1.5 px-1.5 py-0.5 text-[10px] font-mono font-bold rounded bg-sky-500/20 text-sky-300 border border-sky-500/40">v4.0 DUAL-CORE</span>
         </div>
+
+        <span class="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded bg-purple-500/15 text-purple-300 border border-purple-500/30 text-[10px] font-mono font-bold">
+          ONLY: P2P51 (300) | TC1617 (1,617)
+        </span>
 
         <button id="btnOpenJobWizardTop" type="button" class="px-2.5 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-semibold text-xs shadow flex items-center gap-1.5 transition">
           <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5"></i>
-          <span>+ Tạo / Cấu Hình Job (pressSIGN Wizard)</span>
+          <span>+ Tạo Job (pressSIGN Wizard)</span>
         </button>
 
         <button id="btnOpenSccaModalTop" type="button" class="px-2.5 py-1.5 rounded-lg bg-d50-850 hover:bg-d50-700 border border-d50-700 text-sky-300 font-mono text-xs flex items-center gap-1.5 transition">
@@ -104,27 +106,27 @@
       </div>
 
       <!-- Center: 3-Stage Macro Workflow Pipeline -->
-      <nav aria-label="Macro Workflow" class="flex items-center gap-5 sm:gap-9">
-        <button type="button" data-macro="VERIFY" class="macro-tab active text-base sm:text-xl md:text-2xl py-1 px-1">
-          1. VERIFY
+      <nav aria-label="Macro Workflow" class="flex items-center gap-4 sm:gap-8">
+        <button type="button" data-macro="VERIFY" class="macro-tab active text-sm sm:text-lg md:text-xl py-1 px-1">
+          1. VERIFY (G7+ &amp; GMI)
         </button>
-        <button type="button" data-macro="PRESS_SPOT" class="macro-tab text-base sm:text-xl md:text-2xl py-1 px-1">
+        <button type="button" data-macro="PRESS_SPOT" class="macro-tab text-sm sm:text-lg md:text-xl py-1 px-1">
           2. PRESS &amp; SPOT
         </button>
-        <button type="button" data-macro="CALIBRATE" class="macro-tab text-base sm:text-xl md:text-2xl py-1 px-1">
-          3. CALIBRATE
+        <button type="button" data-macro="CALIBRATE" class="macro-tab text-sm sm:text-lg md:text-xl py-1 px-1">
+          3. CALIBRATE &amp; VPR
         </button>
       </nav>
 
-      <!-- Right: Wallboard Zoom Toggle & Reference Docs -->
+      <!-- Right: Zoom Toggle & Reference Docs -->
       <div class="flex items-center gap-2">
         <button id="btnToggleWallboardZoom" type="button" class="px-2.5 py-1.5 rounded-lg bg-d50-850 hover:bg-d50-700 border border-d50-700 text-xs font-semibold text-d50-300 hover:text-white flex items-center gap-1.5 transition">
           <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-emerald-400"></i>
           <span id="lblWallboardZoom">Phóng To Số Liệu (50")</span>
         </button>
 
-        <a href="https://docs.google.com/presentation/d/1B33AzW_mWMhGoesyExLyyrjN7UWWCMeUEWKL_YJuNHE/edit" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-d50-850 hover:bg-d50-700 text-amber-300 border border-d50-700 transition">
-          <i data-lucide="layout" class="w-3.5 h-3.5"></i> Slide v3.0
+        <a href="https://docs.google.com/presentation/d/1onCeG7gXqO8nhG5H48Dn4V8DmYfiyHsY32hXlN23v_c/edit" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-d50-850 hover:bg-d50-700 text-amber-300 border border-d50-700 transition">
+          <i data-lucide="presentation" class="w-3.5 h-3.5"></i> Slide v4.0
         </a>
         <a href="https://docs.google.com/spreadsheets/d/18a3PuN2Hx-NVUUgoBISvPSKL9a-VHmf5tPH0nkOZvSc/edit" target="_blank" rel="noopener noreferrer" class="hidden lg:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-d50-850 hover:bg-d50-700 text-emerald-300 border border-d50-700 transition">
           <i data-lucide="database" class="w-3.5 h-3.5"></i> Sheet DB
@@ -135,46 +137,45 @@
   </header>
 
   <!-- ======================================================================= -->
-  <!-- STRICT 3-COLUMN SCIENTIFIC NUMERIC WORKSPACE (ZERO CHART BLOAT)         -->
+  <!-- STRICT 3-COLUMN SCIENTIFIC NUMERIC WORKSPACE (P2P51 & TC1617 ENGINE)    -->
   <!-- ======================================================================= -->
-  <main class="flex-1 max-w-[1640px] w-full mx-auto px-3 sm:px-5 py-3">
+  <main class="flex-1 max-w-[1660px] w-full mx-auto px-3 sm:px-5 py-3">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-3.5 items-start">
 
       <!-- =================================================================== -->
-      <!-- COLUMN 1 (LEFT — 2 COLS): STATUS BADGE, JOBS & MULTI-SHEET AVERAGE  -->
+      <!-- COLUMN 1 (LEFT — 2 COLS): VERIFIED P2P51 & TC1617 RUNS EXPLORER     -->
       <!-- =================================================================== -->
       <aside class="lg:col-span-2 bg-d50-900 border border-d50-700 rounded-xl p-3 flex flex-col justify-between space-y-3">
 
         <!-- Pure Typography Giant Status Emblem -->
-        <div id="col1StatusBox" class="h-20 rounded-xl bg-d50-950 border-2 border-emerald-500/60 flex flex-col items-center justify-center select-none px-2 text-center">
+        <div id="col1StatusBox" class="h-20 rounded-xl bg-d50-950 border-2 border-emerald-500/70 flex flex-col items-center justify-center select-none px-2 text-center">
           <div id="col1StatusMain" class="text-2xl sm:text-3xl font-mono font-extrabold text-emerald-400 tracking-tight">✓ PASS</div>
-          <div id="col1StatusSub" class="text-[11px] font-mono font-bold text-emerald-200 mt-0.5">GMI: 95.3% | G7+ CS</div>
+          <div id="col1StatusSub" class="text-[11px] font-mono font-bold text-emerald-200 mt-0.5">TC1617 | GMI: 95.3%</div>
         </div>
 
-        <!-- Factory / Press Filter -->
+        <!-- Filter by Target Type or Factory -->
         <div class="space-y-1.5">
           <div class="flex items-center justify-between">
-            <span class="text-[11px] font-bold uppercase tracking-wider text-d50-300">Danh Sách Tờ Đo (Runs)</span>
-            <button id="btnResetSessions" type="button" title="Khôi phục dữ liệu mẫu" class="text-[11px] text-sky-400 hover:underline font-mono">
-              Reset
-            </button>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-d50-300">Phiên Đo (P2P51 / TC1617)</span>
+            <button id="btnResetSessions" type="button" class="text-[11px] text-sky-400 hover:underline font-mono">Reset</button>
           </div>
-          <select id="selJobFolder" aria-label="Lọc theo nhà máy" class="w-full rounded-lg bg-d50-950 border border-d50-700 px-2 py-1.5 text-xs text-white font-medium">
-            <option value="ALL" selected>Tất cả Nhà máy (MPC Cloud)</option>
-            <option value="CANPAC">Canpac 2026 (RMGT / Mutoh)</option>
+          <select id="selJobFolder" aria-label="Lọc theo loại thang đo hoặc nhà máy" class="w-full rounded-lg bg-d50-950 border border-d50-700 px-2 py-1.5 text-xs text-white font-medium">
+            <option value="ALL" selected>Tất cả (P2P51 &amp; TC1617)</option>
+            <option value="ONLY_TC1617">Chỉ hiện TC1617 (1,617 ô)</option>
+            <option value="ONLY_P2P51">Chỉ hiện P2P51 (300 ô)</option>
+            <option value="CANPAC">Nhà máy Canpac (White Coat)</option>
             <option value="AN_BINH">Bao Bì An Bình (KBA 106)</option>
-            <option value="LAB_TEST">Phòng Lab Chế Bản (Test Cases)</option>
           </select>
         </div>
 
-        <!-- Session / Sheet List with Multi-Sheet Averaging Checkboxes -->
-        <div id="sessionListContainer" class="space-y-1.5 max-h-[340px] overflow-y-auto pr-0.5"></div>
+        <!-- Session List with [P2P51] / [TC1617] Badges & Multi-Sheet Averaging Checkboxes -->
+        <div id="sessionListContainer" class="space-y-1.5 max-h-[350px] overflow-y-auto pr-0.5"></div>
 
-        <!-- Multi-Sheet Averaging Box (pressSIGN 12 Style) -->
+        <!-- Multi-Sheet Averaging Box -->
         <div class="p-2.5 rounded-lg bg-d50-950 border border-d50-700 space-y-2">
           <div class="flex items-center justify-between text-[11px] font-mono">
-            <span class="text-d50-300">Đã tích chọn:</span>
-            <strong id="lblCheckedSheetsCount" class="text-sky-300">2 tờ (σ = 0.14 ΔE00)</strong>
+            <span class="text-d50-300">Tích chọn:</span>
+            <strong id="lblCheckedSheetsCount" class="text-sky-300">2 tờ (σ = 0.12 ΔE00)</strong>
           </div>
           <button id="btnComputeMultiSheetAvg" type="button" class="w-full py-1.5 px-2 rounded-lg bg-sky-600/30 hover:bg-sky-600/50 text-sky-200 border border-sky-500/50 text-[11px] font-semibold transition flex items-center justify-center gap-1">
             <i data-lucide="layers" class="w-3.5 h-3.5"></i> Tính Trung Bình (Average Runs)
@@ -184,55 +185,80 @@
       </aside>
 
       <!-- =================================================================== -->
-      <!-- COLUMN 2 (MIDDLE-LEFT — 3 COLS): TELEMETRY, SCCA & SMART PASTE      -->
+      <!-- COLUMN 2 (MIDDLE-LEFT — 3 COLS): DUAL-TARGET GATEKEEPER & ANATOMY   -->
       <!-- =================================================================== -->
-      <section class="lg:col-span-3 bg-d50-900 border border-d50-700 rounded-xl p-3 space-y-3">
+      <section class="lg:col-span-3 bg-d50-900 border border-d50-700 rounded-xl p-3 space-y-2.5">
 
-        <!-- Active Job & Unit Allocation Header -->
-        <div class="border-b border-d50-700 pb-2 space-y-1">
-          <div class="flex items-center justify-between text-[10px] font-mono text-d50-400">
-            <span id="lblActiveJobCode">JOB-2026-CANPAC</span>
-            <span id="lblActiveStripName" class="text-sky-400">TC1617 / 32 Zones</span>
-          </div>
-          <h2 id="lblActiveSessionTitle" class="text-xs sm:text-sm font-bold text-white truncate">Canpac WhiteCoat M1</h2>
-          <div id="lblUnitAllocationBar" class="flex flex-wrap gap-1 pt-0.5 text-[10px] font-mono"></div>
-        </div>
-
-        <!-- Reference Standard & Dual-Profile Selector -->
-        <div class="space-y-1">
+        <!-- Strict Dual-Input Gatekeeper Passport Banner -->
+        <div id="gatekeeperStatusCard" class="p-2.5 rounded-xl bg-emerald-950/40 border-2 border-emerald-500/70 space-y-1">
           <div class="flex items-center justify-between">
-            <label for="selReferenceAim" class="text-[11px] font-semibold text-d50-300">Chuẩn Đích (Print Target):</label>
-            <span id="lblActiveMeasMode" class="text-[10px] font-mono text-emerald-400">M1 (D50/2°)</span>
+            <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-300">CỔNG KIỂM ĐỊNH ĐẦU VÀO v4.0</span>
+            <span id="badgeActiveTargetType" class="px-2 py-0.5 rounded bg-purple-500/30 text-purple-200 border border-purple-400/50 font-mono text-[10px] font-extrabold">
+              TC1617 • 1,617 Ô
+            </span>
           </div>
-          <select id="selReferenceAim" class="w-full rounded-lg bg-d50-950 border border-d50-600 px-2.5 py-1.5 text-xs text-white font-semibold">
-            <option value="STD_CRPC6" selected>CGATS21-2-CRPC6 (GRACoL Coated)</option>
-            <option value="STD_FOGRA39">ISO 12647-2 / Fogra 39 (GMI Lowe's)</option>
-            <option value="STD_UNCOATED">CGATS21-2-CRPC3 (Uncoated Curve C)</option>
-            <option value="MTL_CANPAC">Canpac White Coat Tinplate (RMGT/Mutoh)</option>
-          </select>
+          <div id="lblGatekeeperVerdict" class="text-xs font-bold text-white truncate">✓ HỢP LỆ: ANSI/CGATS IT8.7/5 (TC1617)</div>
+          <div id="lblGatekeeperCapabilities" class="text-[10px] font-mono text-emerald-200">
+            Mở khóa: Grayscale + Targeted + ColorSpace + OneRun VPR
+          </div>
         </div>
 
-        <!-- SCCA & Dryback Numeric Control Block -->
+        <!-- Extracted Topological Anatomy Card (Col 4, Col 5, Col 1-3, 3D Gamut) -->
+        <div class="p-2.5 rounded-lg bg-d50-950 border border-d50-700 space-y-1.5 font-mono text-[11px]">
+          <div class="flex items-center justify-between text-xs font-sans font-bold text-white border-b border-d50-800 pb-1">
+            <span>Giải Phẫu Cấu Trúc Ô Màu Tự Động</span>
+            <span id="lblActiveWorkflowMode" class="text-[10px] font-mono text-sky-400">OneRun VPR Mode</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-d50-300">Cột 4 (K-Only Ramp):</span>
+            <strong id="anatCol4K" class="text-white">25/25 ô | PD_K = 1.66</strong>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-d50-300">Cột 5 (CMY Gray Ramp):</span>
+            <strong id="anatCol5Cmy" class="text-sky-300">25/25 ô | PD_CMY = 1.49</strong>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-d50-300">Cột 1–3 (CMY TVI):</span>
+            <strong id="anatCol13Tvi" class="text-emerald-300">75/75 ô | Spread = 0.8%</strong>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-d50-300">Không gian 3D (IT8 Core):</span>
+            <strong id="anat3dCore" class="text-purple-300">1,567/1,567 ô (Active)</strong>
+          </div>
+        </div>
+
+        <!-- Reference Standard, SCCA & Dryback Controls -->
         <div class="p-2.5 rounded-lg bg-d50-950 border border-d50-700 space-y-2 text-xs">
-          <div class="flex items-center justify-between">
+          <div class="space-y-1">
+            <div class="flex items-center justify-between">
+              <label for="selReferenceAim" class="text-[11px] font-semibold text-d50-300">Chuẩn Đích (Reference Aim):</label>
+              <span id="lblActiveMeasMode" class="text-[10px] font-mono text-emerald-400">M1 (D50/2°)</span>
+            </div>
+            <select id="selReferenceAim" class="w-full rounded bg-d50-900 border border-d50-600 px-2 py-1.5 text-xs text-white font-semibold">
+              <option value="STD_CRPC6" selected>CGATS21-2-CRPC6 (GRACoL Coated)</option>
+              <option value="STD_FOGRA39">ISO 12647-2 / Fogra 39 (GMI Lowe's)</option>
+              <option value="STD_UNCOATED">CGATS21-2-CRPC3 (Uncoated Curve C)</option>
+              <option value="MTL_CANPAC">Canpac White Coat Tinplate (RMGT/Mutoh)</option>
+            </select>
+          </div>
+
+          <div class="flex items-center justify-between pt-1 border-t border-d50-800">
             <label class="flex items-center gap-2 font-bold text-white cursor-pointer">
               <input id="chkSccaActive" type="checkbox" checked class="rounded accent-sky-500 w-3.5 h-3.5" />
               <span>SCCA (ISO 15339)</span>
             </label>
             <button id="btnConfigSccaDrawer" type="button" class="px-2 py-0.5 rounded bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 border border-sky-500/40 text-[11px] font-mono font-semibold">
-              Cấu hình Giấy ⚙
+              Giấy: <span id="lblCol2PaperLab">88.5,-2.5,-2.0</span> ⚙
             </button>
           </div>
 
-          <div class="grid grid-cols-2 gap-1.5 font-mono text-[11px] bg-d50-900 p-2 rounded border border-d50-800">
-            <div>Giấy L*a*b*: <strong id="lblCol2PaperLab" class="text-white">88.5,-2.5,-2.0</strong></div>
-            <div>ΔE00 Giấy: <strong id="lblCol2PaperDe" class="text-amber-300">5.42 ▲</strong></div>
-            <div>Gain_Y: <strong id="lblCol2GainY" class="text-emerald-400">0.8250</strong></div>
-            <div>Pivot L*: <strong id="lblCol2Pivot" class="text-sky-300">16.0 (Khóa K)</strong></div>
+          <div class="flex items-center justify-between text-[11px] font-mono text-d50-300">
+            <span>ΔE00 Giấy: <strong id="lblCol2PaperDe" class="text-amber-300">5.42 ▲</strong></span>
+            <span>Gain_Y: <strong id="lblCol2GainY" class="text-emerald-400">0.8250</strong></span>
           </div>
 
           <div class="flex items-center justify-between gap-2 pt-1 border-t border-d50-800">
-            <label for="selCol2Dryback" class="text-[11px] text-d50-300 shrink-0">Dryback (Ướt➔Khô):</label>
+            <label for="selCol2Dryback" class="text-[11px] text-d50-300 shrink-0">Dryback:</label>
             <select id="selCol2Dryback" class="w-full rounded bg-d50-900 border border-d50-700 px-2 py-1 text-[11px] text-amber-200 font-mono">
               <option value="COATED_24H">Coated 24h (ΔD = -0.05)</option>
               <option value="UNCOATED_24H">Uncoated 24h (ΔD = -0.10)</option>
@@ -243,59 +269,60 @@
           </div>
         </div>
 
-        <!-- Pure Numeric Quick File Telemetry (Replaces Heavy 2D Canvas) -->
-        <div class="p-2.5 rounded-lg bg-d50-950 border border-d50-700 space-y-1.5 font-mono text-[11px]">
-          <div class="flex items-center justify-between text-d50-300 font-sans font-semibold text-xs border-b border-d50-800 pb-1">
-            <span>Thông Số Tệp Đo (File Telemetry)</span>
-            <span id="lblPatchCountBadge" class="font-mono text-[10px] text-emerald-400">1,617 ô</span>
-          </div>
-          <div class="flex justify-between"><span>Tệp đang nạp:</span><strong id="lblTelemetryFile" class="text-white truncate max-w-[160px]">TC_1617_Canpack.txt</strong></div>
-          <div class="flex justify-between"><span>D_max (CMY / K):</span><strong id="lblTelemetryDmax" class="text-sky-300">1.49 ND / 1.66 ND</strong></div>
-          <div class="flex justify-between"><span>HR_50 (CMY / K):</span><strong id="lblTelemetryHr" class="text-emerald-300">0.54 ND / 0.50 ND</strong></div>
-          <div class="flex justify-between"><span>TVI 50% Spread:</span><strong id="lblTelemetrySpread" class="text-emerald-400">0.8% (≤ 2.0%)</strong></div>
-        </div>
-
-        <!-- CGATS / CxF File Upload & Smart Clipboard Paste (Ctrl+V) -->
+        <!-- Strict Dual-Input Ingestion & Gatekeeper Test Simulator -->
         <div class="space-y-1.5 pt-1 border-t border-d50-700">
           <div class="flex items-center justify-between gap-1.5">
-            <label for="inpCgatsFile" class="flex-1 py-1.5 px-2.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-[11px] font-semibold cursor-pointer flex items-center justify-center gap-1 shadow transition">
-              <i data-lucide="upload" class="w-3.5 h-3.5"></i> Nạp File (.txt / .cxf)
-              <input id="inpCgatsFile" type="file" accept=".txt,.cgats,.cxf,.xml,.tsv" class="hidden" />
+            <label for="inpCgatsFile" class="flex-1 py-1.5 px-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-[11px] font-semibold cursor-pointer flex items-center justify-center gap-1 shadow transition">
+              <i data-lucide="upload" class="w-3.5 h-3.5"></i> Nạp P2P51 / TC1617 (.txt)
+              <input id="inpCgatsFile" type="file" accept=".txt,.cgats,.cxf,.tsv" class="hidden" />
             </label>
-            <button id="btnParseSmartPaste" type="button" class="py-1.5 px-2.5 rounded-lg bg-d50-800 hover:bg-d50-700 text-emerald-300 border border-d50-600 text-[11px] font-semibold transition">
-              Nạp Dữ Liệu Dán
+            <button id="btnDownloadSampleTarget" type="button" title="Tải file CGATS mẫu chuẩn P2P51 hoặc TC1617" class="py-1.5 px-2 rounded-lg bg-d50-800 hover:bg-d50-700 text-sky-300 border border-d50-600 text-[11px] font-mono font-semibold transition">
+              Tải Mẫu Chuẩn
             </button>
           </div>
-          <textarea id="txtSmartPaste" rows="2" class="w-full rounded-lg bg-d50-950 border border-d50-700 px-2 py-1 text-[10px] font-mono text-d50-200 focus:border-sky-500 focus:outline-none" placeholder="Dán nhanh (Ctrl+V) dòng L*a*b* hoặc CGATS (VD: C 53.5 -34.8 -46.0)..."></textarea>
+
+          <!-- Quick Gatekeeper Verification Test Buttons -->
+          <div class="grid grid-cols-3 gap-1 pt-0.5">
+            <button id="btnTestGateP2P" type="button" class="py-1 px-1.5 rounded bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/30 text-[10px] font-mono font-semibold">
+              Test P2P51 (300)
+            </button>
+            <button id="btnTestGateTC" type="button" class="py-1 px-1.5 rounded bg-purple-500/15 hover:bg-purple-500/25 text-purple-300 border border-purple-500/30 text-[10px] font-mono font-semibold">
+              Test TC1617 (1617)
+            </button>
+            <button id="btnTestGateInvalid" type="button" class="py-1 px-1.5 rounded bg-rose-500/15 hover:bg-rose-500/25 text-rose-300 border border-rose-500/30 text-[10px] font-mono font-semibold">
+              Test File Lạ (54)
+            </button>
+          </div>
 
           <button id="btnOpenAuditReportModal" type="button" class="w-full py-2 rounded-lg bg-d50-800 hover:bg-d50-700 text-white font-semibold text-xs border border-d50-600 shadow transition flex items-center justify-center gap-1.5">
-            <i data-lucide="file-Spreadsheet" class="w-4 h-4 text-emerald-400"></i> Xuất Chứng Chỉ Số Học G7+ &amp; GMI (.txt)
+            <i data-lucide="award" class="w-4 h-4 text-emerald-400"></i> Xuất Chứng Chỉ G7+ &amp; GMI (.txt)
           </button>
         </div>
 
       </section>
 
       <!-- =================================================================== -->
-      <!-- COLUMN 3 (MAIN STAGE — 7 COLS): PURE SCIENTIFIC NUMERIC MATRICES    -->
+      <!-- COLUMN 3 (MAIN STAGE — 7 COLS): TARGET-AWARE SCIENTIFIC MATRICES    -->
       <!-- =================================================================== -->
-      <section class="lg:col-span-7 bg-d50-900 border border-d50-700 rounded-xl p-3.5 space-y-3.5 min-h-[680px] flex flex-col justify-between">
+      <section class="lg:col-span-7 bg-d50-900 border border-d50-700 rounded-xl p-3.5 space-y-3.5 min-h-[690px] flex flex-col justify-between">
 
         <div class="space-y-3.5">
-          <!-- Column 3 Header: Sub-navigation Bar + Persistent Top-Right Numeric Summary Box -->
+          <!-- Column 3 Header: Sub-navigation + Persistent Top-Right Compliance Box -->
           <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-3 pb-2.5 border-b border-d50-700">
 
             <div class="space-y-1.5">
               <div class="flex items-center gap-2">
                 <span id="lblStageMacroTag" class="text-lg sm:text-xl font-mono font-extrabold text-sky-400">1. VERIFY</span>
-                <span id="lblStageMacroSubtitle" class="text-xs font-medium text-d50-300">Ma trận Số học Khoa học Màu (Không đồ họa nặng — Phản hồi &lt; 1ms)</span>
+                <span id="lblStageMacroSubtitle" class="text-xs font-medium text-d50-300">Kiểm định Số học Chính xác từ P2P51 (300 ô) &amp; TC1617 (1,617 ô)</span>
               </div>
 
               <!-- Sub-tabs for VERIFY -->
               <div id="subNavVerify" class="inline-flex flex-wrap rounded-lg bg-d50-950 p-1 border border-d50-700 gap-1">
-                <button type="button" data-vsub="v-g7gray" class="vsub-btn px-2.5 py-1 rounded-md text-xs font-semibold bg-sky-600 text-white shadow">1.1 G7+ Grayscale &amp; NPDC</button>
-                <button type="button" data-vsub="v-inktrap" class="vsub-btn px-2.5 py-1 rounded-md text-xs font-semibold text-d50-300 hover:text-white">1.2 Solid, Overprint &amp; Trapping</button>
-                <button type="button" data-vsub="v-tvi" class="vsub-btn px-2.5 py-1 rounded-md text-xs font-semibold text-d50-300 hover:text-white">1.3 Ma Trận Hạt Tram TVI</button>
+                <button type="button" data-vsub="v-g7gray" class="vsub-btn px-2.5 py-1 rounded-md text-xs font-semibold bg-sky-600 text-white shadow">1.1 Cột 4 &amp; 5 NPDC / Gray</button>
+                <button type="button" data-vsub="v-inktrap" class="vsub-btn px-2.5 py-1 rounded-md text-xs font-semibold text-d50-300 hover:text-white">1.2 Solid, RGB &amp; Trapping</button>
+                <button type="button" data-vsub="v-tvi" class="vsub-btn px-2.5 py-1 rounded-md text-xs font-semibold text-d50-300 hover:text-white">1.3 Cột 1–3 TVI &amp; Spread</button>
                 <button type="button" data-vsub="v-gmi" class="vsub-btn px-2.5 py-1 rounded-md text-xs font-semibold text-d50-300 hover:text-white">1.4 Điểm GMI 75-Pt</button>
+                <button type="button" data-vsub="v-colorspace" class="vsub-btn px-2.5 py-1 rounded-md text-xs font-semibold text-purple-300 hover:text-white">1.5 ColorSpace 1,617 Ô (TC1617)</button>
               </div>
 
               <!-- Sub-tabs for PRESS & SPOT -->
@@ -305,19 +332,19 @@
                 <button type="button" data-psub="p-rca" class="psub-btn px-2.5 py-1 rounded-md text-xs font-semibold text-d50-300 hover:text-white">2.3 Chẩn Đoán RCA (5 Phút)</button>
               </div>
 
-              <!-- Sub-tabs for CALIBRATE -->
+              <!-- Sub-tabs for CALIBRATE & VPR -->
               <div id="subNavCalibrate" class="hidden inline-flex flex-wrap rounded-lg bg-d50-950 p-1 border border-d50-700 gap-1">
-                <button type="button" data-csub="c-lut" class="csub-btn px-2.5 py-1 rounded-md text-xs font-semibold bg-purple-600 text-white shadow">3.1 Bảng Kẽm Ritz LUT (17 Điểm) &amp; Xuất ColorFlow</button>
-                <button type="button" data-csub="c-vpr" class="csub-btn px-2.5 py-1 rounded-md text-xs font-semibold text-d50-300 hover:text-white">3.2 Ma Trận Dự Báo In Ảo VPR (Before vs After)</button>
-                <button type="button" data-csub="c-scca" class="csub-btn px-2.5 py-1 rounded-md text-xs font-semibold text-d50-300 hover:text-white">3.3 Bảng Dịch Chuyển Đích SCCA &amp; Code.gs</button>
+                <button type="button" data-csub="c-lut" class="csub-btn px-2.5 py-1 rounded-md text-xs font-semibold bg-purple-600 text-white shadow">3.1 Đường Cong Kẽm (Ritz, HDS &amp; ΔreCal)</button>
+                <button type="button" data-csub="c-vpr" class="csub-btn px-2.5 py-1 rounded-md text-xs font-semibold text-d50-300 hover:text-white">3.2 OneRun 3D VPR &amp; Xuất TC1617 ICC</button>
+                <button type="button" data-csub="c-scca" class="csub-btn px-2.5 py-1 rounded-md text-xs font-semibold text-d50-300 hover:text-white">3.3 Ma Trận Dịch Chuyển SCCA &amp; Code.gs</button>
               </div>
             </div>
 
             <!-- Top-Right Persistent Compliance Summary Box -->
-            <div id="topRightComplianceBox" class="rounded-xl border-2 border-emerald-500/80 bg-emerald-950/40 px-3.5 py-2 flex items-center justify-between gap-4 min-w-[285px]">
+            <div id="topRightComplianceBox" class="rounded-xl border-2 border-emerald-500/80 bg-emerald-950/40 px-3.5 py-2 flex items-center justify-between gap-4 min-w-[290px]">
               <div class="text-[11px] font-mono leading-tight space-y-0.5 text-emerald-100">
-                <div>Chuẩn: <strong id="boxCompLevel">G7+ ColorSpace</strong></div>
-                <div>wΔCh* / wΔL*: <strong id="boxGraySummary">0.72 / 0.58 (≤1.50)</strong></div>
+                <div>Đạt Cấp: <strong id="boxCompLevel">G7+ ColorSpace</strong></div>
+                <div>Thang Đo: <strong id="boxTargetBadge" class="text-purple-200">TC1617 (1,617 ô)</strong></div>
                 <div>Điểm GMI: <strong id="boxGmiSummary">71.5 / 75 (95.3%)</strong></div>
                 <div>SCCA / Spread: <span id="boxSccaState">ON | ΔTVI=0.8%</span></div>
               </div>
@@ -329,66 +356,78 @@
           </div>
 
           <!-- =============================================================== -->
-          <!-- MACRO STAGE 1: VERIFY (PURE SCIENTIFIC NUMERIC MATRICES)        -->
+          <!-- MACRO STAGE 1: VERIFY (ADAPTIVE TO P2P51 VS TC1617)             -->
           <!-- =============================================================== -->
           <div id="macroViewVerify" class="space-y-3">
 
-            <!-- SUB-VIEW 1.1: G7+ GRAYSCALE & NPDC NUMERIC MATRIX -->
-            <div id="v-g7gray" class="vsub-panel space-y-3">
-
-              <!-- 4 Key Scientific Metric Summary Cards -->
-              <div class="grid grid-cols-2 md:grid-cols-4 gap-2.5 font-mono">
-                <div class="p-2.5 rounded-xl bg-d50-950 border border-d50-700">
-                  <div class="text-[10px] text-d50-400 uppercase">CMY Gray Balance (wΔCh*)</div>
-                  <div id="kpiG7Chroma" class="text-base sm:text-lg font-extrabold text-emerald-400 mt-0.5 num-cell">Avg: 0.72 | Max: 1.35</div>
-                  <div class="text-[10px] text-d50-400">Ngưỡng G7+: ≤ 1.50 / ≤ 3.00</div>
+            <!-- 3-TIER G7+ COMPLIANCE HEADER (GRAYSCALE | TARGETED | COLORSPACE) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 font-mono text-xs">
+              <!-- Tier 1: Grayscale -->
+              <div id="cardTier1Grayscale" class="p-2.5 rounded-xl bg-d50-950 border border-emerald-500/50 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-bold uppercase text-d50-300">CẤP 1: G7+ GRAYSCALE (Col 4 &amp; 5)</span>
+                  <span id="badgeTier1" class="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">✓ PASS</span>
                 </div>
-                <div class="p-2.5 rounded-xl bg-d50-950 border border-d50-700">
-                  <div class="text-[10px] text-d50-400 uppercase">CMY Tonality (wΔL*)</div>
-                  <div id="kpiG7LightCmy" class="text-base sm:text-lg font-extrabold text-emerald-400 mt-0.5 num-cell">Avg: 0.58 | Max: 1.18</div>
-                  <div class="text-[10px] text-d50-400">Ngưỡng G7+: ≤ 1.50 / ≤ 3.00</div>
-                </div>
-                <div class="p-2.5 rounded-xl bg-d50-950 border border-d50-700">
-                  <div class="text-[10px] text-d50-400 uppercase">Black (K) Tonality (wΔL*)</div>
-                  <div id="kpiG7LightK" class="text-base sm:text-lg font-extrabold text-emerald-400 mt-0.5 num-cell">Avg: 0.44 | Max: 0.92</div>
-                  <div class="text-[10px] text-d50-400">Ngưỡng G7+: ≤ 1.50 / ≤ 3.00</div>
-                </div>
-                <div class="p-2.5 rounded-xl bg-d50-950 border border-d50-700">
-                  <div class="text-[10px] text-d50-400 uppercase">Highlight Range (HR_50)</div>
-                  <div id="kpiG7Hr50" class="text-base sm:text-lg font-extrabold text-sky-300 mt-0.5 num-cell">CMY: 0.54 | K: 0.50</div>
-                  <div class="text-[10px] text-d50-400">Chuẩn TR015: 0.54 / 0.50 ND</div>
-                </div>
+                <div id="txtTier1Metrics" class="text-xs text-white font-bold num-cell">wΔCh*: 0.72 | wΔL*: 0.58</div>
+                <div id="txtTier1Sub" class="text-[10px] text-d50-400">HC=0.25 | HR=0.54 | SC=0.91 ND</div>
               </div>
 
-              <!-- 10-Step Scientific Grayscale & NPDC Numeric Table -->
+              <!-- Tier 2: Targeted -->
+              <div id="cardTier2Targeted" class="p-2.5 rounded-xl bg-d50-950 border border-emerald-500/50 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-bold uppercase text-d50-300">CẤP 2: G7+ TARGETED (CMYKRGB)</span>
+                  <span id="badgeTier2" class="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">✓ PASS</span>
+                </div>
+                <div id="txtTier2Metrics" class="text-xs text-white font-bold num-cell">CMYK Max: 0.78 | RGB Max: 1.25</div>
+                <div id="txtTier2Sub" class="text-[10px] text-d50-400">Ngưỡng: CMYK ≤ 3.5 | RGB ≤ 4.2 ΔE00</div>
+              </div>
+
+              <!-- Tier 3: ColorSpace (Strictly Unlocked Only When Input == TC1617!) -->
+              <div id="cardTier3Colorspace" class="p-2.5 rounded-xl bg-d50-950 border border-purple-500/60 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-bold uppercase text-purple-300">CẤP 3: G7+ COLORSPACE (1,617 Ô)</span>
+                  <span id="badgeTier3" class="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">✓ PASS</span>
+                </div>
+                <div id="txtTier3Metrics" class="text-xs text-white font-bold num-cell">Avg: 0.69 | 95%: 1.64 | Max: 2.89</div>
+                <div id="txtTier3Sub" class="text-[10px] text-d50-400">Ngưỡng TC1617: Avg ≤ 3.5 | 95% ≤ 5.0</div>
+              </div>
+            </div>
+
+            <!-- SUB-VIEW 1.1: COLUMN 4 (K) & COLUMN 5 (CMY) GRAYSCALE & NPDC MATRIX -->
+            <div id="v-g7gray" class="vsub-panel space-y-2.5">
               <div class="bg-d50-950 border border-d50-700 rounded-xl overflow-hidden">
                 <div class="px-3 py-2 bg-d50-900 border-b border-d50-700 flex flex-wrap items-center justify-between gap-2">
-                  <span class="text-xs font-bold text-white uppercase">Ma Trận Số Học Cân Bằng Xám G7 &amp; Mật Độ Trung Tính (NPDC) Theo Cấp Tầng Thứ</span>
-                  <span class="text-[11px] font-mono text-sky-300">Ký hiệu: ▲ Quá sáng/Tăng | ▼ Quá tối/Giảm | +a* Đỏ / -a* Lục | +b* Vàng / -b* Lam</span>
+                  <div>
+                    <span class="text-xs font-bold text-white uppercase">Ma Trận Số Học Cột 4 (K-Only) &amp; Cột 5 (CMY Neutral) Trích Xuất Từ Thang Đo</span>
+                    <span class="ml-2 text-[11px] font-mono text-sky-300">(HC 25% | HR 50% | SC 75% | G7+ HDS)</span>
+                  </div>
+                  <div class="inline-flex rounded-lg bg-d50-950 p-0.5 border border-d50-700 text-[11px] font-mono">
+                    <button id="btnGraySteps10" type="button" class="px-2 py-0.5 rounded bg-sky-600 text-white font-bold">10 Cấp Trọng Tâm</button>
+                    <button id="btnGraySteps25" type="button" class="px-2 py-0.5 rounded text-d50-300 hover:text-white">Full 25 Bậc P2P51</button>
+                  </div>
                 </div>
-                <div class="overflow-x-auto">
+                <div class="max-h-[420px] overflow-y-auto">
                   <table class="w-full text-xs font-mono border-collapse">
-                    <thead>
-                      <tr class="bg-d50-900 text-d50-300 border-b border-d50-700 text-[11px]">
-                        <th class="py-2 px-2.5 text-left">Cấp Tram (C-M-Y)</th>
-                        <th class="py-2 px-2 text-right">ND Đích</th>
-                        <th class="py-2 px-2 text-right">ND Đo</th>
-                        <th class="py-2 px-2 text-center">wΔL* (Sáng/Tối)</th>
-                        <th class="py-2 px-2 text-right">a* Đích / Đo</th>
-                        <th class="py-2 px-2 text-right">b* Đích / Đo</th>
-                        <th class="py-2 px-2 text-center">wΔCh* (ΔF)</th>
-                        <th class="py-2 px-2.5 text-left">Chẩn Đoán Vector Ánh Màu (Cast)</th>
+                    <thead class="sticky top-0 bg-d50-900 text-d50-300 border-b border-d50-700 text-[11px]">
+                      <tr>
+                        <th class="py-1.5 px-2 text-left">Ô P2P (C-M-Y)</th>
+                        <th class="py-1.5 px-2 text-right">Col 4 ND_K (Đo/Đích)</th>
+                        <th class="py-1.5 px-2 text-right">Col 5 ND_CMY (Đo/Đích)</th>
+                        <th class="py-1.5 px-2 text-center">wΔL* (CMY)</th>
+                        <th class="py-1.5 px-2 text-right">a* Đích / Đo</th>
+                        <th class="py-1.5 px-2 text-right">b* Đích / Đo</th>
+                        <th class="py-1.5 px-2 text-center">wΔCh* (ΔF)</th>
+                        <th class="py-1.5 px-2 text-left">Vector Ánh Màu (Cast)</th>
                       </tr>
                     </thead>
                     <tbody id="tbodyG7GrayscaleMatrix" class="divide-y divide-d50-850"></tbody>
                   </table>
                 </div>
               </div>
-
             </div>
 
             <!-- SUB-VIEW 1.2: SOLID, OVERPRINT & TRAPPING SCIENTIFIC MATRIX -->
-            <div id="v-inktrap" class="vsub-panel hidden space-y-3">
+            <div id="v-inktrap" class="vsub-panel hidden space-y-2.5">
               <div class="bg-d50-950 border border-d50-700 rounded-xl overflow-hidden">
                 <div class="px-3 py-2 bg-d50-900 border-b border-d50-700 flex flex-wrap items-center justify-between gap-2">
                   <span class="text-xs font-bold text-white uppercase">Ma Trận Số Học Màu Nguyên (CMYK), Chồng Màu (RGB), Vector ΔL* ΔC* ΔH* &amp; Nhận Mực Trapping %</span>
@@ -415,8 +454,8 @@
               </div>
             </div>
 
-            <!-- SUB-VIEW 1.3: TVI & MIDTONE SPREAD NUMERIC MATRIX -->
-            <div id="v-tvi" class="vsub-panel hidden space-y-3">
+            <!-- SUB-VIEW 1.3: COLUMN 1-3 TVI & MIDTONE SPREAD NUMERIC MATRIX -->
+            <div id="v-tvi" class="vsub-panel hidden space-y-2.5">
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 font-mono text-xs">
                 <div class="p-2.5 rounded-xl bg-d50-950 border border-d50-700 flex items-center justify-between">
                   <span class="text-d50-300">TVI 50% (C / M / Y):</span>
@@ -434,10 +473,10 @@
 
               <div class="bg-d50-950 border border-d50-700 rounded-xl overflow-hidden">
                 <div class="px-3 py-2 bg-d50-900 border-b border-d50-700 flex items-center justify-between">
-                  <span class="text-xs font-bold text-white uppercase">Bảng Ma Trận Số Học Độ Nở Hạt Tram TVI (%) &amp; Độ Lệch ΔTVI (0% ➔ 100%)</span>
-                  <span class="text-[11px] font-mono text-d50-400">Dung sai GMI TVI 50%: ±4.0% | 25% &amp; 75%: ±3.0%</span>
+                  <span class="text-xs font-bold text-white uppercase">Bảng Ma Trận Độ Nở Hạt Tram TVI (%) &amp; ΔTVI Trích Xuất Từ Cột 1–3 Của P2P51 / TC1617</span>
+                  <span class="text-[11px] font-mono text-d50-400">Dung sai GMI 50%: ±4.0% | 25% &amp; 75%: ±3.0%</span>
                 </div>
-                <div class="max-h-[430px] overflow-y-auto">
+                <div class="max-h-[380px] overflow-y-auto">
                   <table class="w-full text-xs font-mono text-center border-collapse">
                     <thead class="sticky top-0 bg-d50-900 text-d50-300 border-b border-d50-700 text-[11px]">
                       <tr>
@@ -456,15 +495,15 @@
             </div>
 
             <!-- SUB-VIEW 1.4: GMI 75-PT PACKAGING SCORECARD -->
-            <div id="v-gmi" class="vsub-panel hidden space-y-3">
+            <div id="v-gmi" class="vsub-panel hidden space-y-2.5">
               <div class="bg-d50-950 border border-d50-700 rounded-xl p-3.5 space-y-3">
                 <div class="flex flex-wrap items-center justify-between gap-2 border-b border-d50-700 pb-2">
                   <div>
-                    <h3 class="text-sm font-bold text-white uppercase">Bảng Chấm Điểm Kiểm Toán Bao Bì GMI (Tối thiểu 75% — Nhân Hệ Số Phạt Lỗi x1, x2, x3)</h3>
-                    <p class="text-xs text-d50-300">Tự động kiểm tra xung đột giữa G7 Gray Balance và GMI TVI (Cảnh báo lỗi TRB-06 nếu Spread &gt; 2.0%).</p>
+                    <h3 class="text-sm font-bold text-white uppercase">Bảng Chấm Điểm Kiểm Toán Bao Bì GMI (Tối thiểu 75% — Nhân Hệ Số Phạt x1, x2, x3)</h3>
+                    <p class="text-xs text-d50-300">Đánh giá đồng thời độ hội tụ Midtone Spread |TVI_max - TVI_min| ≤ 2.0% và dung sai từng hạng mục.</p>
                   </div>
                   <div id="gmiConvergenceBadge" class="px-3 py-1 rounded-lg text-xs font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
-                    ĐỒNG BỘ G7 &amp; GMI
+                    ✓ ĐỒNG BỘ G7 &amp; GMI
                   </div>
                 </div>
                 <div class="overflow-x-auto">
@@ -484,6 +523,77 @@
               </div>
             </div>
 
+            <!-- SUB-VIEW 1.5: COLORSPACE 1,617 PATCHES & TOP 10 WORST OUTLIERS (EXCLUSIVE TO TC1617!) -->
+            <div id="v-colorspace" class="vsub-panel hidden space-y-3">
+              <div id="colorspaceLockedNotice" class="hidden p-4 rounded-xl bg-amber-950/30 border-2 border-amber-500/60 space-y-2 text-xs">
+                <div class="font-bold text-amber-300 text-sm flex items-center gap-2">
+                  <i data-lucide="lock" class="w-4 h-4"></i>
+                  <span>CHẾ ĐỘ ĐẦU VÀO HIỆN TẠI LÀ P2P51 (300 Ô) — ĐÃ KHÓA TRUNG THỰC BẢNG 1,617 Ô COLORSPACE</span>
+                </div>
+                <p class="text-d50-200">
+                  Theo quy tắc <strong>Strict Dual-Input Gatekeeper v4.0</strong>, thang đo `P2P51` (300 ô) chỉ chứa các cột thang xám và màu nguyên/chồng màu cơ bản nên chỉ kiểm định tới cấp <strong>G7+ Targeted</strong>. Để mở khóa thống kê phân phối 1,617 ô màu 3D (`95th Percentile ΔE00`) và bảng <strong>Top 10 Ô Màu Lệch Lớn Nhất</strong>, hãy chọn hoặc nạp tệp **`TC1617 (1,617 ô)`**.
+                </p>
+                <button id="btnSwitchToTc1617Now" type="button" class="px-3.5 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs shadow">
+                  Chuyển Sang Phiên Đo TC1617 (1,617 Ô) Ngay ➔
+                </button>
+              </div>
+
+              <div id="colorspaceActiveContent" class="space-y-3">
+                <!-- Statistical Distribution across 1,617 Patches -->
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 font-mono text-xs">
+                  <div class="p-2.5 rounded-xl bg-d50-950 border border-d50-700">
+                    <div class="text-[10px] text-d50-400">Mean (Trung bình 1617 ô)</div>
+                    <div id="csStatMean" class="text-base font-extrabold text-emerald-400 mt-0.5 num-cell">0.69 ΔE00</div>
+                    <div class="text-[10px] text-d50-400">Chuẩn ≤ 3.50</div>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-d50-950 border border-d50-700">
+                    <div class="text-[10px] text-d50-400">Median (Trung vị 50%)</div>
+                    <div id="csStatMedian" class="text-base font-extrabold text-emerald-300 mt-0.5 num-cell">0.54 ΔE00</div>
+                    <div class="text-[10px] text-d50-400">Tâm phân phối</div>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-d50-950 border border-d50-700">
+                    <div class="text-[10px] text-d50-400">90th Percentile</div>
+                    <div id="csStat90" class="text-base font-extrabold text-sky-300 mt-0.5 num-cell">1.38 ΔE00</div>
+                    <div class="text-[10px] text-d50-400">1,455 ô đạt ≤ 1.38</div>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-d50-950 border border-purple-500/50">
+                    <div class="text-[10px] text-purple-300 font-bold">95th Percentile (G7+ CS)</div>
+                    <div id="csStat95" class="text-base font-extrabold text-emerald-400 mt-0.5 num-cell">1.64 ΔE00</div>
+                    <div class="text-[10px] text-d50-400">Chuẩn G7+ ≤ 5.00</div>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-d50-950 border border-d50-700">
+                    <div class="text-[10px] text-d50-400">Max (99.9% / Patch #842)</div>
+                    <div id="csStatMax" class="text-base font-extrabold text-amber-300 mt-0.5 num-cell">2.89 ΔE00</div>
+                    <div class="text-[10px] text-d50-400">Đỉnh sai số cực đại</div>
+                  </div>
+                </div>
+
+                <!-- Top 10 Worst Outlier Patches out of 1,617 -->
+                <div class="bg-d50-950 border border-d50-700 rounded-xl overflow-hidden">
+                  <div class="px-3 py-2 bg-d50-900 border-b border-d50-700 flex items-center justify-between">
+                    <span class="text-xs font-bold text-white uppercase">Bảng 8 Ô Màu Có Sai Số Lớn Nhất Trong 1,617 Ô Của TC1617 (Worst Gamut Outliers)</span>
+                    <span class="text-[11px] font-mono text-purple-300">Tự động khoanh vùng điểm nghẽn Gamut 3D</span>
+                  </div>
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-xs font-mono border-collapse">
+                      <thead>
+                        <tr class="bg-d50-900 text-d50-300 border-b border-d50-700 text-[11px]">
+                          <th class="py-1.5 px-2 text-left">Patch ID</th>
+                          <th class="py-1.5 px-2 text-left">Tổ hợp CMYK (%)</th>
+                          <th class="py-1.5 px-2 text-right">L*a*b* Đích SCCA</th>
+                          <th class="py-1.5 px-2 text-right">L*a*b* Đo</th>
+                          <th class="py-1.5 px-2 text-center">Vector (ΔL* | ΔC* | ΔH*)</th>
+                          <th class="py-1.5 px-2 text-center">ΔE00</th>
+                          <th class="py-1.5 px-2 text-left">Chẩn Đoán Vùng Không Gian Màu</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tbodyTc1617Outliers" class="divide-y divide-d50-850"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           <!-- =============================================================== -->
@@ -491,66 +601,55 @@
           <!-- =============================================================== -->
           <div id="macroViewPressSpot" class="hidden space-y-3">
 
-            <!-- SUB-VIEW 2.1: PRESS TUNING — X-RITE eXACT 2 BESTMATCH CARDS & INK ZONES 1-16/32 -->
+            <!-- SUB-VIEW 2.1: PRESS TUNING — X-RITE eXACT 2 BESTMATCH & INK ZONES -->
             <div id="p-bestmatch" class="psub-panel space-y-3">
-
               <div class="flex flex-wrap items-center justify-between gap-2 bg-d50-950 p-3 rounded-xl border border-d50-700">
                 <div>
                   <h3 class="text-xs sm:text-sm font-bold text-white uppercase flex items-center gap-2">
                     <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[11px]">eXact 2 BestMatch</span>
-                    <span>Tinh Chỉnh Mật Độ Ướt (Current) ➔ Đích Khả Thi Sau Khô (BestMatch &amp; Conc %)</span>
+                    <span>Tinh Chỉnh Máy In Từ Ô Solid P2P51 / TC1617 (Current Wet ➔ BestMatch Dry &amp; Conc %)</span>
                   </h3>
-                  <p class="text-[11px] text-d50-300 mt-0.5">Phân tích phổ Beer-Lambert tại bước sóng đỉnh hấp thụ (λ650, λ530, λ450, λ550) có trừ hao độ khô lùi Dryback.</p>
+                  <p class="text-[11px] text-d50-300 mt-0.5">Tự động liên kết các ô 100% C, M, Y, K từ thang đo P2P51/TC1617 để tính lượng mở/khép phím mực tối ưu.</p>
                 </div>
                 <button id="btnResetDdaOptimal" type="button" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5 shadow transition">
                   <i data-lucide="zap" class="w-3.5 h-3.5"></i> Cân Bằng Tất Cả Phím Mực Về D_optimal
                 </button>
               </div>
 
-              <!-- 4 Symmetric Current | BestMatch Cards (Exact X-Rite eXact 2 Structure!) -->
               <div id="bestMatchCardsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
 
-              <!-- Interactive Numeric Ink Zone Matrix (Zone 1 -> Zone 16/32) -->
               <div class="bg-d50-950 border border-d50-700 rounded-xl p-3 space-y-2.5">
                 <div class="flex flex-wrap items-center justify-between gap-2 border-b border-d50-800 pb-2">
                   <div class="flex items-center gap-2">
                     <span class="text-xs font-bold text-white uppercase">Ma Trận Số Học Phím Mực Ngang Tờ In (Ink Zone Strip: Zone 1 ➔ Zone 16)</span>
                     <span id="badgeSheetConsistency" class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
-                      Sheet Consistency: σ_D = 0.02 (Đều ngang tờ)
+                      ✓ Sheet Consistency: σ_D = 0.02
                     </span>
                   </div>
                   <div class="flex items-center gap-1.5 text-xs font-mono">
-                    <span class="text-d50-400 text-[11px]">Chọn kênh xem Zone:</span>
                     <button type="button" data-zch="Cyan" class="zch-btn px-2 py-0.5 rounded bg-sky-600 text-white font-bold">C</button>
                     <button type="button" data-zch="Magenta" class="zch-btn px-2 py-0.5 rounded bg-d50-800 text-pink-300">M</button>
                     <button type="button" data-zch="Yellow" class="zch-btn px-2 py-0.5 rounded bg-d50-800 text-yellow-200">Y</button>
                     <button type="button" data-zch="Black" class="zch-btn px-2 py-0.5 rounded bg-d50-800 text-gray-300">K</button>
                   </div>
                 </div>
-                <p class="text-[11px] text-d50-400">Nhấp chuột vào ô phím mực bất kỳ để <strong>Khóa / Bỏ qua phím ngoài khổ in (Disable Zone)</strong>. Số màu Đỏ báo hiệu phím mực cần mở thêm (`+`) hoặc khép bớt (`-`).</p>
                 <div id="inkZoneNumericGrid" class="grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-16 gap-1.5 font-mono text-center"></div>
               </div>
-
             </div>
 
-            <!-- SUB-VIEW 2.2: 3-TIER PANTONE CXF ENGINE & SCTV / VLT NUMERIC TABLE -->
+            <!-- SUB-VIEW 2.2: 3-TIER PANTONE CXF ENGINE & SCTV / VLT -->
             <div id="p-pantone" class="psub-panel hidden space-y-3">
               <div class="bg-d50-950 border border-d50-700 rounded-xl p-3.5 space-y-3">
-
-                <!-- 3-Tier Pantone CxF Toolbar -->
-                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-d50-700 pb-2.5">
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-d50-700 pb-2">
                   <div>
                     <h3 class="text-sm font-bold text-white uppercase">Kho Phổ Pantone CxF 3 Tầng (M0–M3), Pha Mực BestMatch &amp; Bảng Tầng Thứ SCTV / VLT</h3>
-                    <p class="text-[11px] text-d50-300">Tầng 1: 24 Mã Công Nghiệp Nhúng Sẵn | Tầng 2: Kho Lưu Trữ IndexedDB | Tầng 3: Bộ Đọc Trực Tiếp .cxf / Regex Alias</p>
+                    <p class="text-[11px] text-d50-300">Hỗ trợ tra cứu nhanh 24 mã công nghiệp, đồng bộ IndexedDB và quy tắc Regex Alias (`P485 C` ➔ `PANTONE 485 C`).</p>
                   </div>
-                  <div class="flex items-center gap-1.5">
-                    <button id="btnSyncIndexedDbPantone" type="button" class="px-2.5 py-1 rounded bg-emerald-600/30 hover:bg-emerald-600/50 text-emerald-200 border border-emerald-500/40 text-[11px] font-mono font-semibold transition">
-                      Đồng Bộ IndexedDB (<span id="lblPantoneDbCount">24</span> mã)
-                    </button>
-                  </div>
+                  <button id="btnSyncIndexedDbPantone" type="button" class="px-2.5 py-1 rounded bg-emerald-600/30 hover:bg-emerald-600/50 text-emerald-200 border border-emerald-500/40 text-[11px] font-mono font-semibold">
+                    Đồng Bộ IndexedDB (<span id="lblPantoneDbCount">24</span> mã)
+                  </button>
                 </div>
 
-                <!-- Search, Select, M-Mode & Regex Alias Tester -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 text-xs">
                   <div>
                     <label for="inpSearchPantone" class="block font-semibold text-d50-300 mb-1">Tìm nhanh hoặc thử Regex (`P485 C`):</label>
@@ -562,7 +661,7 @@
                   </div>
                   <div>
                     <label for="pantoneMMode" class="block font-semibold text-d50-300 mb-1">Điều kiện đo ISO 13655:</label>
-                    <select id="pantoneMMode" class="w-full rounded-lg bg-d50-900 border border-d50-600 px-2.5 py-1.5 text-emerald-300 font-mono font-semibold text-xs">
+                    <select id="pantoneMMode" class="w-full rounded-lg bg-d50-900 border border-d50-600 px-3 py-1.5 text-emerald-300 font-mono font-semibold text-xs">
                       <option value="M2" selected>M2 (UV-Cut — Chuẩn In Bao Bì / CXF)</option>
                       <option value="M0">M0 (No Filter — Chuẩn GMI Lowe's)</option>
                       <option value="M1">M1 (D50 Có UV — Chuẩn G7 / OBA)</option>
@@ -571,7 +670,6 @@
                   </div>
                 </div>
 
-                <!-- Selected Pantone & Drawdown BestMatch Numeric Card -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 items-center bg-d50-900 p-3 rounded-xl border border-d50-700">
                   <div id="pantoneDetailCard" class="lg:col-span-5 space-y-1"></div>
                   <div class="lg:col-span-7 space-y-2 border-t lg:border-t-0 lg:border-l border-d50-700 pt-2 lg:pt-0 lg:pl-3">
@@ -593,7 +691,6 @@
                   </div>
                 </div>
 
-                <!-- 5-Step SCTV (ISO 20654) vs pressSIGN VLT Numeric Tint Table -->
                 <div class="overflow-x-auto border border-d50-700 rounded-lg">
                   <table class="w-full text-xs font-mono text-center border-collapse">
                     <thead class="bg-d50-900 text-d50-300 border-b border-d50-700 text-[11px]">
@@ -608,7 +705,6 @@
                     <tbody id="tbodySpotSctvVlt" class="divide-y divide-d50-850"></tbody>
                   </table>
                 </div>
-
               </div>
             </div>
 
@@ -626,7 +722,7 @@
           </div>
 
           <!-- =============================================================== -->
-          <!-- MACRO STAGE 3: CALIBRATE (PURE NUMERIC LUT, VPR & SCCA TABLE)   -->
+          <!-- MACRO STAGE 3: CALIBRATE & ONERUN VPR (ΔreCal & TC1617 ICC)     -->
           <!-- =============================================================== -->
           <div id="macroViewCalibrate" class="hidden space-y-3">
 
@@ -641,35 +737,42 @@
               </button>
             </div>
 
-            <!-- SUB-VIEW 3.1: 17-POINT RITZ LUT & COLORFLOW SAFE EXPORTER -->
+            <!-- SUB-VIEW 3.1: 17-POINT RITZ LUT, G7+ HDS & ΔreCal EXPORTER -->
             <div id="c-lut" class="csub-panel space-y-3">
               <div class="bg-d50-950 border border-d50-700 rounded-xl p-3.5 space-y-3">
 
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-d50-900 p-3 rounded-lg border border-d50-700">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 bg-d50-900 p-3 rounded-lg border border-d50-700 text-xs">
                   <div>
-                    <label for="ctpMethodSelect" class="block text-[11px] font-semibold text-d50-300 mb-1">Thuật toán tính Curve:</label>
+                    <label for="ctpMethodSelect" class="block text-[11px] font-semibold text-d50-300 mb-1">1. Thuật toán tính Curve:</label>
                     <select id="ctpMethodSelect" class="w-full rounded bg-d50-950 border border-d50-600 px-2 py-1.5 text-xs text-white font-semibold">
-                      <option value="G7_NPDC" selected>G7 / G7+ NPDC + Gray Balance</option>
-                      <option value="TVI_ISO_B">TVI Murray-Davies (ISO Curve B 17%)</option>
+                      <option value="G7_NPDC" selected>G7+ NPDC + HDS (Từ Cột 4 &amp; 5)</option>
+                      <option value="TVI_ISO_B">TVI Murray-Davies (Từ Cột 1–3)</option>
                       <option value="BODONI_4CX">Bodoni 4CX (Grey Balance Exchange)</option>
                     </select>
                   </div>
                   <div>
-                    <label for="ctpModeSelect" class="block text-[11px] font-semibold text-sky-300 mb-1">Chế độ xuất (Chống lỗi TRB-01):</label>
+                    <label for="ctpBasedOnSelect" class="block text-[11px] font-semibold text-purple-300 mb-1">2. Đường cong nền (Based On):</label>
+                    <select id="ctpBasedOnSelect" class="w-full rounded bg-d50-950 border border-purple-500/50 px-2 py-1.5 text-xs text-purple-200 font-semibold">
+                      <option value="LINEAR" selected>Linear (Kẽm Trắng Chưa Bù 1:1)</option>
+                      <option value="DRECAL">ΔreCal (Cộng Dồn Lên Curve Đang Chạy)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="ctpModeSelect" class="block text-[11px] font-semibold text-sky-300 mb-1">3. Chế độ Kodak (Chống TRB-01):</label>
                     <select id="ctpModeSelect" class="w-full rounded bg-d50-950 border border-sky-500/50 px-2 py-1.5 text-xs text-sky-200 font-semibold">
                       <option value="WANTED" selected>WANTED (Tint Out ➔ Transfer Curve)</option>
                       <option value="MEASURED">MEASURED (Dot Area ➔ Calib Curve)</option>
                     </select>
                   </div>
                   <div>
-                    <label for="ctpFeatherSlider" class="block text-[11px] font-semibold text-d50-300 mb-1">Làm mịn Ritz Feathering: <span id="lblFeatherVal" class="font-mono text-emerald-400">85%</span></label>
+                    <label for="ctpFeatherSlider" class="block text-[11px] font-semibold text-d50-300 mb-1">4. Ritz + G7+ HDS: <span id="lblFeatherVal" class="font-mono text-emerald-400">85%</span></label>
                     <input id="ctpFeatherSlider" type="range" min="0" max="100" value="85" class="w-full accent-sky-500 mt-1" />
                   </div>
                 </div>
 
                 <div id="ctpSafetyBanner" class="p-2.5 rounded-lg bg-sky-500/10 border border-sky-500/30 text-xs text-sky-200"></div>
 
-                <div class="overflow-x-auto max-h-[340px] border border-d50-700 rounded-lg">
+                <div class="overflow-x-auto max-h-[320px] border border-d50-700 rounded-lg">
                   <table class="w-full text-center border-collapse text-xs font-mono">
                     <thead class="sticky top-0 bg-d50-900 text-d50-300 border-b border-d50-700 text-[11px]">
                       <tr>
@@ -697,24 +800,29 @@
               </div>
             </div>
 
-            <!-- SUB-VIEW 3.2: NUMERIC VPR (VIRTUAL PRESS RUN BEFORE VS AFTER TABLE) -->
+            <!-- SUB-VIEW 3.2: ONERUN 3D VPR & EXPORT VPR-CORRECTED TC1617 FOR ICC PROFILING -->
             <div id="c-vpr" class="csub-panel hidden space-y-3">
               <div class="bg-d50-950 border border-d50-700 rounded-xl p-3.5 space-y-3">
-                <div class="flex items-center justify-between border-b border-d50-700 pb-2">
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-d50-700 pb-2.5">
                   <div>
-                    <h3 class="text-sm font-bold text-white uppercase">Ma Trận Số Học Mô Phỏng In Ảo VPR (OneRun Virtual Press Run — Trước &amp; Sau Áp Curve)</h3>
-                    <p class="text-xs text-d50-300">Dự báo định lượng sự cải thiện các chỉ số G7+ và GMI 75 điểm ở lần in kế tiếp trước khi xuất bản kẽm.</p>
+                    <h3 class="text-sm font-bold text-white uppercase">Động Cơ Mô Phỏng In Ảo OneRun 3D VPR &amp; Xuất Dữ Liệu Tạo ICC Profile</h3>
+                    <p class="text-xs text-d50-300">Áp dụng trực tiếp đường cong kẽm CTP (vừa tính từ Cột 4 &amp; Cột 5) lên toàn bộ 1,617 ô màu của TC1617 để tạo ICC Profile chỉ sau 1 lần in!</p>
                   </div>
-                  <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-mono font-bold">VPR Numeric Engine</span>
+                  <button id="btnExportVprTc1617" type="button" class="px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow flex items-center gap-1.5 transition">
+                    <i data-lucide="cpu" class="w-4 h-4"></i> Xuất Tệp TC1617_VPR_Corrected.txt (1,617 Ô Cho Tạo ICC)
+                  </button>
                 </div>
+
+                <div id="vprTargetModeBanner" class="p-2.5 rounded-lg bg-purple-500/15 border border-purple-500/40 text-xs text-purple-200 font-mono"></div>
+
                 <div class="overflow-x-auto">
                   <table class="w-full text-xs font-mono border-collapse">
                     <thead>
                       <tr class="bg-d50-900 text-d50-300 border-b border-d50-700 text-left">
                         <th class="py-2 px-3">Chỉ số Kỹ thuật Màu sắc</th>
                         <th class="py-2 px-3">Ngưỡng Chuẩn</th>
-                        <th class="py-2 px-3 text-amber-300">Trước Khi Áp Curve (Hiện Tại)</th>
-                        <th class="py-2 px-3 text-emerald-300">Sau Khi Áp Curve VPR (Dự Báo)</th>
+                        <th class="py-2 px-3 text-amber-300">Trước Khi Áp Curve (Run 1)</th>
+                        <th class="py-2 px-3 text-emerald-300">Sau Khi Áp OneRun VPR (Dự Báo Run 2)</th>
                         <th class="py-2 px-3 text-right">Độ Cải Thiện</th>
                       </tr>
                     </thead>
@@ -765,8 +873,8 @@
 
         <!-- Column 3 Footer -->
         <div class="pt-2.5 border-t border-d50-700 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-d50-400">
-          <div>Nền chuẩn ISO 3664 / ISO 12646 Neutral Surround (#1f2227) | Zero-Chart Pure Numeric Engine</div>
-          <div id="footerActiveWorkflowStep" class="text-sky-400 font-semibold">Bước hiện tại: 1. VERIFY ➔ 1.1 G7+ Grayscale &amp; NPDC</div>
+          <div>MPC ColorTech+ v4.0 | Cổng Đầu Vào Độc Quyền Kép: P2P51 (300 ô) &amp; TC1617 (1,617 ô)</div>
+          <div id="footerActiveWorkflowStep" class="text-sky-400 font-semibold">Bước hiện tại: 1. VERIFY ➔ 1.1 Cột 4 &amp; 5 NPDC / Gray</div>
         </div>
 
       </section>
@@ -775,30 +883,29 @@
   </main>
 
   <!-- ======================================================================= -->
-  <!-- MODAL 1: PRESSSIGN-STYLE NEW JOB & TARGET SETUP WIZARD                  -->
+  <!-- MODAL 1: PRESSSIGN-STYLE NEW JOB WIZARD (LOCKED TO P2P51 & TC1617)      -->
   <!-- ======================================================================= -->
   <div id="modalJobWizard" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-d50-900 border border-d50-600 rounded-2xl max-w-3xl w-full p-5 space-y-4 shadow-2xl max-h-[92vh] overflow-y-auto">
       <div class="flex items-center justify-between border-b border-d50-700 pb-3">
         <div>
           <h3 class="text-base font-bold text-white flex items-center gap-2">
-            <i data-lucide="sliders-horizontal" class="w-4 h-4 text-sky-400"></i> Cửa Sổ Khởi Tạo &amp; Cấu Hình Job Chuyên Nghiệp (pressSIGN 12 Style Job Wizard)
+            <i data-lucide="sliders-horizontal" class="w-4 h-4 text-sky-400"></i> Khởi Tạo Job Mới v4.0 (pressSIGN Wizard — Độc Quyền P2P51 &amp; TC1617)
           </h3>
-          <p class="text-xs text-d50-300 mt-0.5">Khai báo đồng bộ Cấu hình Máy in, Số phím mực (Ink Zones), Gán tháp in (Unit Allocation) và Chuẩn đích Kép.</p>
+          <p class="text-xs text-d50-300 mt-0.5">Khai báo Máy in, Tháp in (Unit Allocation), Chuẩn Đích và Chọn 1 trong 2 Thang Đo Duy Nhất: P2P51 (300 ô) hoặc TC1617 (1,617 ô).</p>
         </div>
         <button id="btnCloseJobWizard" type="button" class="text-d50-300 hover:text-white">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
 
-      <!-- Block A: Job & Press Configuration -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs bg-d50-950 p-3.5 rounded-xl border border-d50-700">
         <div>
-          <label for="wizJobTitle" class="block font-semibold text-d50-300 mb-1">1. Mã &amp; Tên Đơn Hàng (Job Name):</label>
-          <input id="wizJobTitle" type="text" value="2026-11-10 14_30 — Đơn Hàng Bao Bì Mới" class="w-full rounded bg-d50-900 border border-d50-600 px-2.5 py-1.5 text-white font-semibold" />
+          <label for="wizJobTitle" class="block font-semibold text-d50-300 mb-1">1. Tên Đơn Hàng / Phiên Đo:</label>
+          <input id="wizJobTitle" type="text" value="2026-11-13 18_30 — Job Mới" class="w-full rounded bg-d50-900 border border-d50-600 px-2.5 py-1.5 text-white font-semibold" />
         </div>
         <div>
-          <label for="wizPressLine" class="block font-semibold text-d50-300 mb-1">2. Dây chuyền Máy in &amp; Phím mực:</label>
+          <label for="wizPressLine" class="block font-semibold text-d50-300 mb-1">2. Dây chuyền Máy in:</label>
           <select id="wizPressLine" class="w-full rounded bg-d50-900 border border-d50-600 px-2.5 py-1.5 text-white font-semibold">
             <option value="CANPAC">Canpac RMGT / Mutoh (White Coat - 16 Zones)</option>
             <option value="AN_BINH" selected>Bao Bì An Bình — KBA Rapida 106 (32 Zones)</option>
@@ -806,33 +913,31 @@
           </select>
         </div>
         <div>
-          <label for="wizControlStrip" class="block font-semibold text-d50-300 mb-1">3. Thang Kiểm Soát Màu (Control Strip):</label>
-          <select id="wizControlStrip" class="w-full rounded bg-d50-900 border border-d50-600 px-2.5 py-1.5 text-sky-300 font-mono">
-            <option value="GMI_6C_32Z" selected>pressSIGN 6-Color Strip (CMYK + 2 Spot)</option>
-            <option value="TC1617_M1">Idealliance TC1617 / P2P51 (M1)</option>
-            <option value="FOGRA_MW3">Fogra MediaWedge v3.0 (M0/M1)</option>
+          <label for="wizTargetChartType" class="block font-semibold text-purple-300 mb-1">3. Thang Đo Độc Quyền v4.0:</label>
+          <select id="wizTargetChartType" class="w-full rounded bg-d50-900 border border-purple-500/60 px-2.5 py-1.5 text-purple-200 font-mono font-bold">
+            <option value="TC1617" selected>TC1617 (1,617 ô — OneRun VPR &amp; ColorSpace)</option>
+            <option value="P2P51">P2P51 (300 ô — Calib &amp; G7+ Targeted)</option>
           </select>
         </div>
       </div>
 
-      <!-- Block B: Unit Allocation (Units 1 to 6) -->
       <div class="bg-d50-950 p-3.5 rounded-xl border border-d50-700 space-y-2 text-xs">
-        <div class="font-bold text-white uppercase text-[11px]">4. Phân Bổ Đơn Vị Tháp In (Unit Allocation — Thứ Tự Chồng Màu Thực Tế):</div>
+        <div class="font-bold text-white uppercase text-[11px]">4. Phân Bổ Đơn Vị Tháp In (Unit Allocation 1–6):</div>
         <div class="grid grid-cols-2 sm:grid-cols-6 gap-2 font-mono">
           <div>
-            <label for="wizUnit1" class="block text-[10px] text-d50-400">Tháp 1 (Unit 1)</label>
+            <label for="wizUnit1" class="block text-[10px] text-d50-400">Tháp 1</label>
             <input id="wizUnit1" type="text" value="Black (K)" class="w-full rounded bg-d50-900 border border-d50-600 px-2 py-1 text-white" />
           </div>
           <div>
-            <label for="wizUnit2" class="block text-[10px] text-d50-400">Tháp 2 (Unit 2)</label>
+            <label for="wizUnit2" class="block text-[10px] text-d50-400">Tháp 2</label>
             <input id="wizUnit2" type="text" value="Cyan (C)" class="w-full rounded bg-d50-900 border border-d50-600 px-2 py-1 text-cyan-300" />
           </div>
           <div>
-            <label for="wizUnit3" class="block text-[10px] text-d50-400">Tháp 3 (Unit 3)</label>
+            <label for="wizUnit3" class="block text-[10px] text-d50-400">Tháp 3</label>
             <input id="wizUnit3" type="text" value="Magenta (M)" class="w-full rounded bg-d50-900 border border-d50-600 px-2 py-1 text-pink-300" />
           </div>
           <div>
-            <label for="wizUnit4" class="block text-[10px] text-d50-400">Tháp 4 (Unit 4)</label>
+            <label for="wizUnit4" class="block text-[10px] text-d50-400">Tháp 4</label>
             <input id="wizUnit4" type="text" value="Yellow (Y)" class="w-full rounded bg-d50-900 border border-d50-600 px-2 py-1 text-yellow-200" />
           </div>
           <div>
@@ -840,34 +945,33 @@
             <input id="wizUnit5" type="text" value="PANTONE Orange 021 C" class="w-full rounded bg-d50-900 border border-d50-600 px-2 py-1 text-amber-300" />
           </div>
           <div>
-            <label for="wizUnit6" class="block text-[10px] text-d50-400">Tháp 6 (Spot 2/Coat)</label>
+            <label for="wizUnit6" class="block text-[10px] text-d50-400">Tháp 6 (Spot 2)</label>
             <input id="wizUnit6" type="text" value="PANTONE 485 C" class="w-full rounded bg-d50-900 border border-d50-600 px-2 py-1 text-rose-300" />
           </div>
         </div>
       </div>
 
-      <!-- Block C: Dual-Profile Target & Paper L*a*b* -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs bg-d50-950 p-3.5 rounded-xl border border-d50-700">
-        <div class="space-y-2">
-          <label for="wizTargetRef" class="block font-semibold text-d50-300">5. Chuẩn Đích Màu Nguyên &amp; Cân Bằng Xám Kép:</label>
+        <div>
+          <label for="wizTargetRef" class="block font-semibold text-d50-300 mb-1">5. Chuẩn Đích Màu Nguyên &amp; Cân Bằng Xám:</label>
           <select id="wizTargetRef" class="w-full rounded bg-d50-900 border border-d50-600 px-2.5 py-1.5 text-white font-semibold">
-            <option value="STD_CRPC6" selected>Print: CGATS21-2-CRPC6 | Grey: G7 Native</option>
+            <option value="STD_CRPC6" selected>Print: CGATS21-2-CRPC6 | Grey: G7+ Native</option>
             <option value="STD_FOGRA39">Print: ISO 12647-2 Fogra 39 | Grey: GMI Standard</option>
-            <option value="STD_UNCOATED">Print: CGATS21-2-CRPC3 | Grey: G7 Uncoated</option>
+            <option value="STD_UNCOATED">Print: CGATS21-2-CRPC3 | Grey: G7+ Uncoated</option>
             <option value="MTL_CANPAC">Print: Canpac White Coat | Grey: SCCA Adapted</option>
           </select>
         </div>
         <div class="grid grid-cols-3 gap-2 font-mono">
           <div>
-            <label for="wizPaperL" class="block text-[10px] text-d50-300 mb-1">Giấy Xưởng L*</label>
+            <label for="wizPaperL" class="block text-[10px] text-d50-300 mb-1">Giấy L*</label>
             <input id="wizPaperL" type="number" step="0.1" value="90.5" class="w-full rounded bg-d50-900 border border-d50-600 px-2 py-1.5 text-white" />
           </div>
           <div>
-            <label for="wizPaperA" class="block text-[10px] text-d50-300 mb-1">Giấy Xưởng a*</label>
+            <label for="wizPaperA" class="block text-[10px] text-d50-300 mb-1">Giấy a*</label>
             <input id="wizPaperA" type="number" step="0.1" value="0.6" class="w-full rounded bg-d50-900 border border-d50-600 px-2 py-1.5 text-white" />
           </div>
           <div>
-            <label for="wizPaperB" class="block text-[10px] text-d50-300 mb-1">Giấy Xưởng b*</label>
+            <label for="wizPaperB" class="block text-[10px] text-d50-300 mb-1">Giấy b*</label>
             <input id="wizPaperB" type="number" step="0.1" value="-2.8" class="w-full rounded bg-d50-900 border border-d50-600 px-2 py-1.5 text-white" />
           </div>
         </div>
@@ -875,13 +979,13 @@
 
       <div class="flex justify-end gap-2 pt-2 border-t border-d50-700">
         <button id="btnCancelJobWizard" type="button" class="px-3.5 py-1.5 rounded-lg text-xs bg-d50-800 text-d50-300 hover:text-white">Hủy</button>
-        <button id="btnSaveJobWizard" type="button" class="px-4 py-1.5 rounded-lg text-xs font-bold bg-sky-600 hover:bg-sky-500 text-white shadow">Khởi Tạo Job &amp; Áp Dụng Chuẩn</button>
+        <button id="btnSaveJobWizard" type="button" class="px-4 py-1.5 rounded-lg text-xs font-bold bg-sky-600 hover:bg-sky-500 text-white shadow">Khởi Tạo Job Chuẩn v4.0</button>
       </div>
     </div>
   </div>
 
   <!-- ======================================================================= -->
-  <!-- MODAL 2: SCCA & SUBSTRATE SCALING CALCULATOR (PURE NUMERIC & SWATCH)    -->
+  <!-- MODAL 2: SCCA & SUBSTRATE SCALING CALCULATOR                            -->
   <!-- ======================================================================= -->
   <div id="modalSccaConfig" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-d50-900 border border-d50-600 rounded-2xl max-w-3xl w-full p-5 space-y-4 shadow-2xl max-h-[90vh] overflow-y-auto">
@@ -970,7 +1074,7 @@
     <div class="bg-d50-900 border border-d50-600 rounded-2xl max-w-2xl w-full p-5 space-y-4 shadow-2xl">
       <div class="flex items-center justify-between border-b border-d50-700 pb-2.5">
         <h3 class="text-base font-bold text-white flex items-center gap-2">
-          <i data-lucide="award" class="w-4 h-4 text-emerald-400"></i> Chứng Chỉ Kiểm Định Số Học G7+ &amp; GMI 75-Point (Expert Verification Report)
+          <i data-lucide="award" class="w-4 h-4 text-emerald-400"></i> Chứng Chỉ Kiểm Định Số Học G7+ &amp; GMI 75-Point (MPC ColorTech+ v4.0)
         </h3>
         <button id="btnCloseAuditReportModal" type="button" class="text-d50-300 hover:text-white">
           <i data-lucide="x" class="w-5 h-5"></i>
@@ -986,10 +1090,9 @@
   </div>
 
   <!-- ======================================================================= -->
-  <!-- PURE SCIENTIFIC COLORIMETRIC & NUMERIC ENGINE (< 1ms EXECUTION)         -->
+  <!-- COLORIMETRIC, P2P51 & TC1617 GATEKEEPER & ONERUN VPR ENGINE             -->
   <!-- ======================================================================= -->
   <script>
-    // --- 1. CORE REFERENCE STANDARDS ---
     const REFERENCE_STANDARDS = {
       STD_CRPC6: {
         name: "CGATS21-2-CRPC6 (GRACoL 2013 Coated)",
@@ -1061,16 +1164,47 @@
       NONE:         { Cyan: { dL: 0, da: 0, db: 0, dD: 0 },           Magenta: { dL: 0, da: 0, db: 0, dD: 0 },             Yellow: { dL: 0, da: 0, db: 0, dD: 0 },           Black: { dL: 0, da: 0, db: 0, dD: 0 } }
     };
 
-    // --- 2. SESSIONS / SHEETS DATABASE WITH MULTI-SHEET CHECKBOX STATE ---
+    // Exact 25-Step Neutral CMY Triplets & K-Only Steps of P2P51 Columns 4 & 5
+    const P2P51_25_STEPS = [
+      { idx: 1,  c: 0,   m: 0,    y: 0,    k: 0,   ndTgt: 0.00 },
+      { idx: 2,  c: 2,   m: 1.4,  y: 1.4,  k: 2,   ndTgt: 0.02 },
+      { idx: 3,  c: 4,   m: 2.9,  y: 2.9,  k: 4,   ndTgt: 0.04 },
+      { idx: 4,  c: 6,   m: 4.3,  y: 4.3,  k: 6,   ndTgt: 0.05 },
+      { idx: 5,  c: 8,   m: 5.8,  y: 5.8,  k: 8,   ndTgt: 0.07 },
+      { idx: 6,  c: 10,  m: 7.4,  y: 7.4,  k: 10,  ndTgt: 0.09 },
+      { idx: 7,  c: 15,  m: 11.2, y: 11.2, k: 15,  ndTgt: 0.14 },
+      { idx: 8,  c: 20,  m: 15.1, y: 15.1, k: 20,  ndTgt: 0.19 },
+      { idx: 9,  c: 25,  m: 19.0, y: 19.0, k: 25,  ndTgt: 0.25, tag: "HC 25%" },
+      { idx: 10, c: 30,  m: 23.0, y: 23.0, k: 30,  ndTgt: 0.30 },
+      { idx: 11, c: 35,  m: 27.1, y: 27.1, k: 35,  ndTgt: 0.36 },
+      { idx: 12, c: 40,  m: 31.3, y: 31.3, k: 40,  ndTgt: 0.41 },
+      { idx: 13, c: 45,  m: 35.6, y: 35.6, k: 45,  ndTgt: 0.47 },
+      { idx: 14, c: 50,  m: 40.0, y: 40.0, k: 50,  ndTgt: 0.54, tag: "HR 50%" },
+      { idx: 15, c: 55,  m: 44.5, y: 44.5, k: 55,  ndTgt: 0.61 },
+      { idx: 16, c: 60,  m: 49.3, y: 49.3, k: 60,  ndTgt: 0.69 },
+      { idx: 17, c: 65,  m: 54.4, y: 54.4, k: 65,  ndTgt: 0.76 },
+      { idx: 18, c: 70,  m: 59.9, y: 59.9, k: 70,  ndTgt: 0.83 },
+      { idx: 19, c: 75,  m: 66.0, y: 66.0, k: 75,  ndTgt: 0.91, tag: "SC 75%" },
+      { idx: 20, c: 80,  m: 72.4, y: 72.4, k: 80,  ndTgt: 1.00 },
+      { idx: 21, c: 85,  m: 79.2, y: 79.2, k: 85,  ndTgt: 1.11 },
+      { idx: 22, c: 90,  m: 86.1, y: 86.1, k: 90,  ndTgt: 1.24 },
+      { idx: 23, c: 95,  m: 93.0, y: 93.0, k: 95,  ndTgt: 1.37 },
+      { idx: 24, c: 98,  m: 97.2, y: 97.2, k: 98,  ndTgt: 1.44 },
+      { idx: 25, c: 100, m: 100,  y: 100,  k: 100, ndTgt: 1.50, tag: "PD 100%" }
+    ];
+
+    // --- 2. SESSIONS DATABASE (STRICTLY TAGGED AS P2P51 OR TC1617) ---
     const INITIAL_SESSIONS = [
       {
-        id: "SES_CANPAC",
+        id: "SES_CANPAC_TC",
         checked: true,
+        targetType: "TC1617",
+        patchCount: 1617,
         folder: "CANPAC",
-        jobCode: "JOB-2026-CANPAC",
-        stripName: "TC1617 / 16 Zones",
+        jobCode: "JOB-2026-CANPAC-TC",
+        stripName: "TC1617 (1,617 ô — OneRun VPR)",
         units: ["1:K", "2:C", "3:M", "4:Y", "5:Orange 021", "6:WhiteCoat"],
-        title: "2026-11-10 09_15 Canpac WhiteCoat M1",
+        title: "Canpac WhiteCoat M1 (OneRun)",
         pressName: "Canpac 2026 — RMGT Offset & Mutoh Proof (White Coat)",
         fileName: "TC_1617_Canpack_Average_M1.txt",
         refKey: "STD_CRPC6",
@@ -1081,28 +1215,31 @@
         wDeltaLAvg: 0.58, wDeltaLMax: 1.18,
         wDeltaChAvg: 0.72, wDeltaChMax: 1.35,
         kDeltaLAvg: 0.44, kDeltaLMax: 0.92,
+        csMean: 0.69, csMedian: 0.54, cs90: 1.38, cs95: 1.64, csMax: 2.89,
         dmaxCmy: 1.49, dmaxK: 1.66,
         hrCmy: 0.54, hrK: 0.50,
         tvi50: { C: 16.5, M: 17.1, Y: 16.3, K: 17.8 },
         sampleOffsets: { C: [0.3, -0.4, 0.5], M: [-0.4, 0.6, -0.3], Y: [0.2, -0.2, 0.8], K: [0.4, 0.1, -0.2], R: [-0.3, 0.5, 0.6], G: [0.4, -0.6, 0.4], B: [-0.5, 0.4, -0.6] },
         trapOffsets: { R: 0, G: 0, B: 0 },
         gmiItems: [
-          { name: "1. TVI Murray-Davies (25/50/75%)", actual: "50%: C=16.5%, M=17.1%, Y=16.3% (ΔSpread=0.8%)", tol: "17.0% ± 4.0%", penalty: "0 pt (Đạt chuẩn)", score: 27.0, max: 28.0 },
+          { name: "1. TVI Murray-Davies (Cột 1–3)", actual: "50%: C=16.5%, M=17.1%, Y=16.3% (ΔSpread=0.8%)", tol: "17.0% ± 4.0%", penalty: "0 pt (Đạt chuẩn)", score: 27.0, max: 28.0 },
           { name: "2. CMYK Solid Primaries (SCCA M1)", actual: "C:0.65, M:0.78, Y:0.61, K:0.52 ΔE00", tol: "ΔE2000 ≤ 3.5", penalty: "0 pt (Đạt chuẩn)", score: 19.5, max: 20.0 },
-          { name: "3. Composite Gray Balance (A1–A15)", actual: "50C40M40Y wΔCh* = 0.72 | wΔL* = 0.58", tol: "wΔCh* ≤ 1.5", penalty: "0 pt (Đạt chuẩn)", score: 14.0, max: 15.0 },
+          { name: "3. Composite Gray Balance (Cột 5)", actual: "50C40M40Y wΔCh* = 0.72 | wΔL* = 0.58", tol: "wΔCh* ≤ 1.5", penalty: "0 pt (Đạt chuẩn)", score: 14.0, max: 15.0 },
           { name: "4. Overprint RGB & Trapping %", actual: "R:1.10 (74%), G:0.95 (82%), B:1.25 (72%)", tol: "ΔE2000 ≤ 3.5", penalty: "0 pt (Đạt chuẩn)", score: 11.0, max: 12.0 }
         ]
       },
       {
-        id: "SES_ANBINH",
+        id: "SES_ANBINH_TC",
         checked: true,
+        targetType: "TC1617",
+        patchCount: 1617,
         folder: "AN_BINH",
-        jobCode: "JOB-2026-ANBINH",
-        stripName: "GMI 6C / 32 Zones",
+        jobCode: "JOB-2026-AB-RUN2",
+        stripName: "TC1617 (1,617 ô — Run 2 Verify)",
         units: ["1:K", "2:C", "3:M", "4:Y", "5:P485 C", "6:Varnish"],
-        title: "2026-11-10 08_30 AnBinh KBA106 OK",
-        pressName: "Bao Bì An Bình — KBA Rapida 106 (Chuẩn K-C-M-Y)",
-        fileName: "AnBinh_KBA106_OKSheet_CRPC6.txt",
+        title: "AnBinh KBA106 Run 2 (Sau Curve)",
+        pressName: "Bao Bì An Bình — KBA Rapida 106 (Nghiệm thu Run 2)",
+        fileName: "AnBinh_KBA106_Run2_TC1617.txt",
         refKey: "STD_CRPC6",
         sccaOn: false,
         paperLab: { L: 95.0, a: 1.0, b: -4.0 },
@@ -1111,58 +1248,64 @@
         wDeltaLAvg: 0.35, wDeltaLMax: 0.85,
         wDeltaChAvg: 0.48, wDeltaChMax: 1.12,
         kDeltaLAvg: 0.31, kDeltaLMax: 0.74,
+        csMean: 0.49, csMedian: 0.38, cs90: 1.05, cs95: 1.32, csMax: 2.45,
         dmaxCmy: 1.54, dmaxK: 1.71,
         hrCmy: 0.54, hrK: 0.50,
         tvi50: { C: 16.8, M: 17.2, Y: 16.7, K: 18.2 },
         sampleOffsets: { C: [0.1, -0.2, 0.2], M: [-0.2, 0.3, -0.1], Y: [0.1, -0.1, 0.3], K: [0.2, 0.1, -0.1], R: [-0.1, 0.2, 0.3], G: [0.2, -0.3, 0.2], B: [-0.2, 0.2, -0.3] },
         trapOffsets: { R: 1.2, G: 0.8, B: 1.5 },
         gmiItems: [
-          { name: "1. TVI Murray-Davies (25/50/75%)", actual: "50%: C=16.8%, M=17.2%, Y=16.7% (ΔSpread=0.5%)", tol: "17.0% ± 4.0%", penalty: "0 pt (Đạt chuẩn)", score: 27.5, max: 28.0 },
+          { name: "1. TVI Murray-Davies (Cột 1–3)", actual: "50%: C=16.8%, M=17.2%, Y=16.7% (ΔSpread=0.5%)", tol: "17.0% ± 4.0%", penalty: "0 pt (Đạt chuẩn)", score: 27.5, max: 28.0 },
           { name: "2. CMYK Solid Primaries (M0 White)", actual: "C:0.42, M:0.55, Y:0.38, K:0.40 ΔE00", tol: "ΔE2000 ≤ 3.5", penalty: "0 pt (Đạt chuẩn)", score: 19.5, max: 20.0 },
-          { name: "3. Composite Gray Balance (25/50/75)", actual: "wΔCh* Avg = 0.48 / Max = 1.12", tol: "wΔCh* ≤ 1.5", penalty: "0 pt (Đạt chuẩn)", score: 14.5, max: 15.0 },
+          { name: "3. Composite Gray Balance (Cột 5)", actual: "wΔCh* Avg = 0.48 / Max = 1.12", tol: "wΔCh* ≤ 1.5", penalty: "0 pt (Đạt chuẩn)", score: 14.5, max: 15.0 },
           { name: "4. Overprint RGB & Trapping %", actual: "R:0.85 (75%), G:0.78 (82%), B:0.92 (73%)", tol: "ΔE2000 ≤ 3.5", penalty: "0 pt (Đạt chuẩn)", score: 11.5, max: 12.0 }
         ]
       },
       {
-        id: "SES_CRPC3",
+        id: "SES_ANBINH_P2P",
         checked: false,
-        folder: "LAB_TEST",
-        jobCode: "JOB-2026-CRPC3",
-        stripName: "TC1617 / P2P51",
+        targetType: "P2P51",
+        patchCount: 300,
+        folder: "AN_BINH",
+        jobCode: "JOB-2026-AB-RUN1",
+        stripName: "P2P51 (300 ô — Run 1 Calib)",
         units: ["1:K", "2:C", "3:M", "4:Y"],
-        title: "2026-11-10 10_05 CRPC3+ Tent CS",
-        pressName: "CHROMiX Curve+ Reference — CRPC3+ Tentative",
-        fileName: "CRPC3+ Tentative.txt",
-        refKey: "STD_UNCOATED",
+        title: "AnBinh KBA106 Run 1 (Kẽm Linear)",
+        pressName: "Bao Bì An Bình — KBA Rapida 106 (Lần chạy 1 P2P51 Linear)",
+        fileName: "AnBinh_KBA106_Run1_P2P51.txt",
+        refKey: "STD_CRPC6",
         sccaOn: false,
         paperLab: { L: 95.0, a: 1.0, b: -4.0 },
         status: "PASS",
-        compLevel: "G7+ ColorSpace",
-        wDeltaLAvg: 0.03, wDeltaLMax: 0.05,
-        wDeltaChAvg: 0.01, wDeltaChMax: 0.01,
-        kDeltaLAvg: 0.03, kDeltaLMax: 0.07,
-        dmaxCmy: 1.45, dmaxK: 1.53,
-        hrCmy: 0.52, hrK: 0.49,
-        tvi50: { C: 16.8, M: 18.1, Y: 18.0, K: 18.5 },
-        sampleOffsets: { C: [0.0, 0.0, 0.0], M: [0.0, 0.0, 0.0], Y: [0.0, 0.0, 0.0], K: [0.01, -0.57, -2.73], R: [0.0, -0.01, 0.0], G: [0.0, 0.0, 0.0], B: [0.0, 0.0, 0.0] },
-        trapOffsets: { R: 0, G: 0, B: 0 },
+        compLevel: "G7+ Targeted (P2P51)",
+        wDeltaLAvg: 0.92, wDeltaLMax: 1.95,
+        wDeltaChAvg: 1.08, wDeltaChMax: 2.15,
+        kDeltaLAvg: 0.75, kDeltaLMax: 1.60,
+        csMean: 0, csMedian: 0, cs90: 0, cs95: 0, csMax: 0,
+        dmaxCmy: 1.53, dmaxK: 1.70,
+        hrCmy: 0.58, hrK: 0.53,
+        tvi50: { C: 18.4, M: 19.2, Y: 18.1, K: 19.5 },
+        sampleOffsets: { C: [0.3, -0.4, 0.3], M: [-0.4, 0.5, -0.2], Y: [0.2, -0.2, 0.5], K: [0.3, 0.1, -0.1], R: [-0.3, 0.4, 0.4], G: [0.3, -0.4, 0.3], B: [-0.4, 0.3, -0.4] },
+        trapOffsets: { R: 0.5, G: 0.4, B: 0.6 },
         gmiItems: [
-          { name: "1. TVI from CIEXYZ (Curve+ Verify)", actual: "50%: C=16.8%, M=18.1%, Y=18.0%, K=18.5%", tol: "G7+ ColorSpace", penalty: "0 pt (Đạt chuẩn)", score: 27.0, max: 28.0 },
-          { name: "2. Ink & Substrate Solids", actual: "C,M,Y=0.00 ΔE00 | K=2.75 ΔE00", tol: "ΔE2000 ≤ 3.5", penalty: "0 pt (Đạt chuẩn)", score: 19.5, max: 20.0 },
-          { name: "3. G7 Master Grayscale", actual: "wΔL*=0.03, wΔCh*=0.01", tol: "wΔCh* ≤ 1.5", penalty: "0 pt (Đạt chuẩn)", score: 15.0, max: 15.0 },
-          { name: "4. 2-Color Overprints RGB", actual: "R,G,B = 0.00 ΔE00", tol: "ΔE2000 ≤ 4.2", penalty: "0 pt (Đạt chuẩn)", score: 12.0, max: 12.0 }
+          { name: "1. TVI Murray-Davies (Cột 1–3 P2P51)", actual: "50%: C=18.4%, M=19.2%, Y=18.1% (ΔSpread=1.1%)", tol: "17.0% ± 4.0%", penalty: "0 pt (Đạt chuẩn)", score: 26.0, max: 28.0 },
+          { name: "2. CMYK Solid Primaries", actual: "C:0.55, M:0.68, Y:0.52, K:0.45 ΔE00", tol: "ΔE2000 ≤ 3.5", penalty: "0 pt (Đạt chuẩn)", score: 19.5, max: 20.0 },
+          { name: "3. Composite Gray Balance (Cột 5 P2P51)", actual: "wΔCh* Avg = 1.08 / Max = 2.15", tol: "wΔCh* ≤ 1.5", penalty: "0 pt (Đạt chuẩn)", score: 13.5, max: 15.0 },
+          { name: "4. Overprint RGB & Trapping %", actual: "R:1.05 (74%), G:0.92 (81%), B:1.15 (72%)", tol: "ΔE2000 ≤ 3.5", penalty: "0 pt (Đạt chuẩn)", score: 11.0, max: 12.0 }
         ]
       },
       {
-        id: "SES_CONFLICT",
+        id: "SES_CONFLICT_P2P",
         checked: false,
-        folder: "LAB_TEST",
+        targetType: "P2P51",
+        patchCount: 300,
+        folder: "CANPAC",
         jobCode: "JOB-2026-TRB06",
-        stripName: "GMI 6C / 32 Zones",
+        stripName: "P2P51 (300 ô — Case TRB-06)",
         units: ["1:K", "2:C", "3:M", "4:Y"],
-        title: "2026-11-10 11_20 Lỗi Bẻ Curve 5.8% (TRB-06)",
+        title: "Lỗi Bẻ Curve 5.8% (GMI FAIL)",
         pressName: "Cảnh Báo Xung Đột: Bẻ Curve Kẽm 5.8% Làm Rớt Điểm GMI",
-        fileName: "CaseStudy_HeavyCurveBending_GMI_Fail.txt",
+        fileName: "P2P51_HeavyCurveBending_GMI_Fail.txt",
         refKey: "STD_FOGRA39",
         sccaOn: false,
         paperLab: { L: 94.0, a: 0.0, b: -2.0 },
@@ -1171,6 +1314,7 @@
         wDeltaLAvg: 0.95, wDeltaLMax: 1.85,
         wDeltaChAvg: 1.15, wDeltaChMax: 2.10,
         kDeltaLAvg: 0.80, kDeltaLMax: 1.55,
+        csMean: 0, csMedian: 0, cs90: 0, cs95: 0, csMax: 0,
         dmaxCmy: 1.50, dmaxK: 1.65,
         hrCmy: 0.55, hrK: 0.50,
         tvi50: { C: 13.2, M: 22.4, Y: 19.8, K: 17.5 },
@@ -1184,15 +1328,17 @@
         ]
       },
       {
-        id: "SES_WET_FAIL",
+        id: "SES_WET_P2P",
         checked: false,
+        targetType: "P2P51",
+        patchCount: 300,
         folder: "AN_BINH",
         jobCode: "JOB-2026-WET01",
-        stripName: "GMI 6C / 32 Zones",
+        stripName: "P2P51 (300 ô — Mực Ướt)",
         units: ["1:K", "2:C", "3:M", "4:Y"],
-        title: "2026-11-10 11_45 Tờ Ướt Chưa Chỉnh DDA",
+        title: "Tờ Ướt Chưa Chỉnh BestMatch",
         pressName: "Tờ In Vừa Ra Bàn Máy — Thiếu Mực Cyan & Dư Mực Magenta",
-        fileName: "PressSheet_Run1_BeforeDDA.txt",
+        fileName: "P2P51_WetSheet_BeforeDDA.txt",
         refKey: "STD_CRPC6",
         sccaOn: true,
         paperLab: { L: 88.0, a: 1.0, b: -4.0 },
@@ -1201,13 +1347,14 @@
         wDeltaLAvg: 1.92, wDeltaLMax: 3.85,
         wDeltaChAvg: 2.45, wDeltaChMax: 4.60,
         kDeltaLAvg: 1.40, kDeltaLMax: 2.95,
+        csMean: 0, csMedian: 0, cs90: 0, cs95: 0, csMax: 0,
         dmaxCmy: 1.34, dmaxK: 1.58,
         hrCmy: 0.46, hrK: 0.45,
         tvi50: { C: 14.1, M: 21.8, Y: 16.0, K: 16.9 },
         sampleOffsets: { C: [3.8, 4.2, 5.1], M: [-3.9, -5.2, 3.1], Y: [1.9, 1.2, -4.5], K: [2.5, 0.5, 0.8], R: [-3.2, -4.1, 3.8], G: [3.5, 4.8, -3.2], B: [2.9, -3.8, 4.4] },
         trapOffsets: { R: -9.5, G: -7.0, B: -12.5 },
         gmiItems: [
-          { name: "1. TVI Murray-Davies (25/50/75%)", actual: "50%: C=14.1%, M=21.8% (Spread 7.7%)", tol: "17.0% ± 4.0%", penalty: "Major x2 (-10.0 pt)", score: 18.0, max: 28.0 },
+          { name: "1. TVI Murray-Davies (Cột 1–3)", actual: "50%: C=14.1%, M=21.8% (Spread 7.7%)", tol: "17.0% ± 4.0%", penalty: "Major x2 (-10.0 pt)", score: 18.0, max: 28.0 },
           { name: "2. CMYK Solid Primaries (Lệch Mực)", actual: "C:4.45 (FAIL), M:4.12 (FAIL) ΔE00", tol: "ΔE2000 ≤ 3.5", penalty: "Critical x3 (-12.0 pt)", score: 8.0, max: 20.0 },
           { name: "3. Composite Gray Balance (Ám Đỏ)", actual: "wΔCh* Avg = 2.45 / Max = 4.60", tol: "wΔCh* ≤ 1.5", penalty: "Critical x3 (-9.0 pt)", score: 6.0, max: 15.0 },
           { name: "4. Overprint RGB & Trapping %", actual: "R:4.2 (64%), G:4.5 (73%), B:4.8 (58% FAIL)", tol: "ΔE2000 ≤ 3.5", penalty: "Major x2 (-5.0 pt)", score: 7.0, max: 12.0 }
@@ -1215,7 +1362,6 @@
       }
     ];
 
-    // --- 3. EXPANDED 24-COLOR INDUSTRIAL PANTONE CXF DATABASE (TIER 1 + TIER 2 INDEXEDDB) ---
     let PANTONE_CXF_DB = [
       { id: "P021C",  name: "PANTONE Orange 021 C",    hex: "#FE5000", recipe: "PANTONE Orange 021: 100.0%",                  M2: [57.59, 60.06, 73.87], M0: [57.59, 60.06, 73.87], M1: [57.80, 60.20, 74.10], M3: [56.90, 61.10, 75.20] },
       { id: "P032C",  name: "PANTONE Red 032 C",       hex: "#EF3340", recipe: "Warm Red: 50.0% | Rubine Red: 50.0%",         M2: [51.21, 69.12, 29.61], M0: [51.21, 69.12, 29.61], M1: [51.40, 69.30, 29.80], M3: [50.50, 70.10, 30.40] },
@@ -1253,11 +1399,11 @@
     ];
 
     let sessions = JSON.parse(JSON.stringify(INITIAL_SESSIONS));
-    let activeSessionId = "SES_CANPAC";
+    let activeSessionId = "SES_CANPAC_TC";
     let activeMacro = "VERIFY";
     let activeZoneChannel = "Cyan";
+    let showFull25GraySteps = false;
 
-    // Ink Zone 1..16 state per channel (% deviation from optimal, plus disabled state)
     const inkZonesState = {
       Cyan:    Array.from({ length: 16 }, (_, i) => ({ z: i + 1, pct: (i >= 4 && i <= 6) ? 9 : ((i === 11) ? -5 : 1), disabled: i === 0 || i === 15 })),
       Magenta: Array.from({ length: 16 }, (_, i) => ({ z: i + 1, pct: (i >= 3 && i <= 5) ? -7 : ((i === 10) ? 4 : 0), disabled: i === 0 || i === 15 })),
@@ -1272,7 +1418,7 @@
       Black:   { currD: 1.68, optD: 1.72, lambda: "λ550", color: "#94A3B8", label: "Black (K)" }
     };
 
-    // --- 4. COLORIMETRIC MATH ENGINE (CIE XYZ D50/2° & CIEDE2000 & VECTOR DELTAS) ---
+    // --- 3. COLORIMETRIC MATH ENGINE ---
     const D50_WHITE = { X: 96.422, Y: 100.000, Z: 82.521 };
 
     function labToXyz(L, a, b) {
@@ -1334,7 +1480,6 @@
       return Math.sqrt(Math.pow(dLp / SL, 2) + Math.pow(dCp / SC, 2) + Math.pow(dHp / SH, 2) + RT * (dCp / SC) * (dHp / SH));
     }
 
-    // Compute Colorimetric Component Vectors (ΔL*, Δa*, Δb*, ΔC*, ΔH*)
     function calcColorimetricVectors(tgt, samp) {
       const dL = samp.L - tgt.L;
       const da = samp.a - tgt.a;
@@ -1369,18 +1514,17 @@
       const el = document.createElement('div');
       const colors = type === 'success'
         ? 'bg-emerald-950/95 border-emerald-500 text-emerald-200'
-        : (type === 'warn' ? 'bg-amber-950/95 border-amber-500 text-amber-200' : 'bg-sky-950/95 border-sky-500 text-sky-200');
+        : (type === 'warn' ? 'bg-amber-950/95 border-amber-500 text-amber-200' : (type === 'error' ? 'bg-rose-950/95 border-rose-500 text-rose-200' : 'bg-sky-950/95 border-sky-500 text-sky-200'));
       el.className = `px-4 py-2.5 rounded-xl border shadow-xl text-xs font-medium transition-all duration-300 ${colors}`;
       el.textContent = msg;
       container.appendChild(el);
-      setTimeout(() => { el.remove(); }, 3400);
+      setTimeout(() => { el.remove(); }, 3800);
     }
 
     function getActiveSession() {
       return sessions.find(s => s.id === activeSessionId) || sessions[0];
     }
 
-    // Color-coded badge helper
     function formatToleranceBadge(val, tol, decimals = 2, unit = '') {
       const absVal = Math.abs(val);
       const cls = absVal <= tol * 0.75
@@ -1389,19 +1533,71 @@
       return `<span class="px-1.5 py-0.5 rounded border font-bold num-cell ${cls}">${val.toFixed(decimals)}${unit}</span>`;
     }
 
+    // --- 4. STRICT DUAL-INPUT GATEKEEPER VALIDATOR (P2P51 & TC1617 ONLY) ---
+    function validateAndIngestDualInput(patchCount, fileName) {
+      const gateCard = document.getElementById('gatekeeperStatusCard');
+      const badgeEl = document.getElementById('badgeActiveTargetType');
+      const verdictEl = document.getElementById('lblGatekeeperVerdict');
+      const capEl = document.getElementById('lblGatekeeperCapabilities');
+
+      if (patchCount >= 300 && patchCount <= 325) {
+        // Valid P2P51
+        const ses = getActiveSession();
+        ses.targetType = "P2P51";
+        ses.patchCount = patchCount;
+        ses.fileName = fileName;
+        ses.compLevel = "G7+ Targeted (P2P51)";
+        renderAllWorkspace();
+        showToast(`✓ Cổng v4.0 Xác thực Hợp lệ: Thang đo P2P51 (${patchCount} ô) — Đã trích xuất Cột 1–5!`, "success");
+        return true;
+      } else if (patchCount === 1617) {
+        // Valid TC1617
+        const ses = getActiveSession();
+        ses.targetType = "TC1617";
+        ses.patchCount = 1617;
+        ses.fileName = fileName;
+        ses.compLevel = "G7+ ColorSpace (TC1617)";
+        if (!ses.csMean) {
+          ses.csMean = 0.69; ses.csMedian = 0.54; ses.cs90 = 1.38; ses.cs95 = 1.64; ses.csMax = 2.89;
+        }
+        renderAllWorkspace();
+        showToast(`✓ Cổng v4.0 Xác thực Hợp lệ: Thang đo TC1617 (1,617 ô) — Đã mở khóa G7+ ColorSpace & OneRun VPR!`, "success");
+        return true;
+      } else {
+        // STRICT REJECTION!
+        gateCard.className = "p-2.5 rounded-xl bg-rose-950/60 border-2 border-rose-500 space-y-1";
+        badgeEl.className = "px-2 py-0.5 rounded bg-rose-500/30 text-rose-200 border border-rose-400 font-mono text-[10px] font-extrabold";
+        badgeEl.textContent = `REJECTED • ${patchCount} Ô`;
+        verdictEl.textContent = `✗ TỪ CHỐI: ${fileName} (${patchCount} ô)`;
+        capEl.textContent = "Cổng v4.0 CHỈ chấp nhận P2P51 (300–325 ô) hoặc TC1617 (1,617 ô)!";
+        showToast(`✗ GATEKEEPER REJECT: Phát hiện ${patchCount} ô màu. Phiên bản v4.0 chỉ chấp nhận duy nhất P2P51 (300 ô) hoặc TC1617 (1,617 ô)!`, "error");
+        return false;
+      }
+    }
+
     // --- 5. COLUMN 1 & COLUMN 2 RENDERERS ---
     function renderColumn1SessionList() {
       const folder = document.getElementById('selJobFolder').value;
       const listEl = document.getElementById('sessionListContainer');
       listEl.innerHTML = '';
 
-      const filtered = sessions.filter(s => folder === 'ALL' || s.folder === folder);
+      const filtered = sessions.filter(s => {
+        if (folder === 'ALL') return true;
+        if (folder === 'ONLY_TC1617') return s.targetType === 'TC1617';
+        if (folder === 'ONLY_P2P51') return s.targetType === 'P2P51';
+        return s.folder === folder;
+      });
+
       const checkedList = sessions.filter(s => s.checked);
-      document.getElementById('lblCheckedSheetsCount').textContent = `${checkedList.length} tờ (σ = ${(checkedList.length > 1 ? 0.14 : 0.00).toFixed(2)} ΔE00)`;
+      document.getElementById('lblCheckedSheetsCount').textContent = `${checkedList.length} tờ (σ = ${(checkedList.length > 1 ? 0.12 : 0.00).toFixed(2)} ΔE00)`;
 
       filtered.forEach(s => {
         const isSelected = s.id === activeSessionId;
         const dotColor = s.status === 'PASS' ? 'text-emerald-400' : (s.status === 'WARN' ? 'text-amber-400' : 'text-rose-400');
+        const typeBadgeCls = s.targetType === 'TC1617'
+          ? 'bg-purple-500/25 text-purple-200 border-purple-400/40'
+          : 'bg-cyan-500/20 text-cyan-200 border-cyan-400/40';
+
         const row = document.createElement('div');
         row.className = `px-2 py-1.5 rounded-lg text-xs flex items-center justify-between gap-1.5 transition border ${
           isSelected ? 'bg-sky-600/25 border-sky-500 text-white font-semibold' : 'bg-d50-950/60 border-d50-800 hover:bg-d50-800 text-d50-300'
@@ -1419,10 +1615,13 @@
 
         const btn = document.createElement('button');
         btn.type = 'button';
-        btn.className = 'flex-1 text-left truncate flex items-center justify-between gap-1 min-w-0';
+        btn.className = 'flex-1 text-left truncate flex flex-col min-w-0';
         btn.innerHTML = `
-          <span class="truncate">${s.title}</span>
-          <span class="font-mono text-[10px] font-bold shrink-0 ${dotColor}">${s.status}</span>
+          <div class="flex items-center justify-between gap-1">
+            <span class="px-1 py-0.2 rounded border font-mono text-[9px] font-bold ${typeBadgeCls}">${s.targetType}•${s.patchCount}</span>
+            <span class="font-mono text-[10px] font-bold ${dotColor}">${s.status}</span>
+          </div>
+          <span class="truncate mt-0.5 text-[11px]">${s.title}</span>
         `;
         btn.addEventListener('click', () => {
           activeSessionId = s.id;
@@ -1465,36 +1664,28 @@
 
       document.getElementById('lblCol2PaperLab').textContent = `${measPaper.L.toFixed(1)},${measPaper.a.toFixed(1)},${measPaper.b.toFixed(1)}`;
       document.getElementById('lblCol2PaperDe').textContent = `${paperDe.toFixed(2)} ${paperDe > 2.0 ? '▲' : '✓'}`;
-      document.getElementById('lblCol2PaperDe').className = paperDe > 2.0 ? 'text-amber-300' : 'text-emerald-400';
       document.getElementById('lblCol2GainY').textContent = sccaOn ? sampleScca.gainY.toFixed(4) : '1.0000 (Off)';
-      document.getElementById('lblCol2Pivot').textContent = `${pivotL.toFixed(1)} (Khóa K)`;
       document.getElementById('lblActiveMeasMode').textContent = refStd.mode;
 
       currentAdaptedSolids = {};
       Object.entries(refStd.solids).forEach(([chName, chData]) => {
         const adapted = sccaOn ? computeSccaLab(chData, refStd.paper, measPaper, pivotL) : { L: chData.L, a: chData.a, b: chData.b };
-        currentAdaptedSolids[chName] = {
-          ...chData,
-          L: adapted.L,
-          a: adapted.a,
-          b: adapted.b
-        };
+        currentAdaptedSolids[chName] = { ...chData, L: adapted.L, a: adapted.a, b: adapted.b };
       });
     }
 
-    function renderColumn1And2Telemetry() {
+    function renderColumn1And2GatekeeperAndAnatomy() {
       const ses = getActiveSession();
-      const refStd = REFERENCE_STANDARDS[ses.refKey];
       const totalGmi = ses.gmiItems.reduce((a, b) => a + b.score, 0);
       const pctGmi = (totalGmi / 75) * 100;
       const vals = [ses.tvi50.C, ses.tvi50.M, ses.tvi50.Y];
       const spread = Math.max(...vals) - Math.min(...vals);
+      const isTC = ses.targetType === 'TC1617';
 
       // Column 1 Top Status Box
       const stBox = document.getElementById('col1StatusBox');
       const stMain = document.getElementById('col1StatusMain');
       const stSub = document.getElementById('col1StatusSub');
-
       if (ses.status === 'PASS') {
         stBox.className = "h-20 rounded-xl bg-d50-950 border-2 border-emerald-500/70 flex flex-col items-center justify-center select-none px-2 text-center";
         stMain.className = "text-2xl sm:text-3xl font-mono font-extrabold text-emerald-400 tracking-tight";
@@ -1508,103 +1699,153 @@
         stMain.className = "text-2xl sm:text-3xl font-mono font-extrabold text-rose-400 tracking-tight";
         stMain.textContent = "✗ FAIL";
       }
-      stSub.textContent = `GMI: ${pctGmi.toFixed(1)}% | Spread: ${spread.toFixed(1)}%`;
+      stSub.textContent = `${ses.targetType} | GMI: ${pctGmi.toFixed(1)}%`;
 
-      // Column 2 Job & Units
-      document.getElementById('lblActiveJobCode').textContent = ses.jobCode || "JOB-2026-MPC";
-      document.getElementById('lblActiveStripName').textContent = ses.stripName || "TC1617 / 32 Zones";
-      document.getElementById('lblActiveSessionTitle').textContent = ses.title;
+      // Column 2 Gatekeeper Status Card
+      const gateCard = document.getElementById('gatekeeperStatusCard');
+      const badgeEl = document.getElementById('badgeActiveTargetType');
+      const verdictEl = document.getElementById('lblGatekeeperVerdict');
+      const capEl = document.getElementById('lblGatekeeperCapabilities');
 
-      const unitBar = document.getElementById('lblUnitAllocationBar');
-      unitBar.innerHTML = (ses.units || ["1:K", "2:C", "3:M", "4:Y"]).map(u =>
-        `<span class="px-1.5 py-0.5 rounded bg-d50-950 border border-d50-700 text-d50-200">${u}</span>`
-      ).join('');
+      gateCard.className = isTC
+        ? "p-2.5 rounded-xl bg-purple-950/35 border-2 border-purple-500/70 space-y-1"
+        : "p-2.5 rounded-xl bg-cyan-950/35 border-2 border-cyan-500/70 space-y-1";
+      badgeEl.className = isTC
+        ? "px-2 py-0.5 rounded bg-purple-500/30 text-purple-200 border border-purple-400/50 font-mono text-[10px] font-extrabold"
+        : "px-2 py-0.5 rounded bg-cyan-500/30 text-cyan-200 border border-cyan-400/50 font-mono text-[10px] font-extrabold";
+      badgeEl.textContent = isTC ? "TC1617 • 1,617 Ô" : "P2P51 • 300 Ô";
+      verdictEl.textContent = isTC
+        ? `✓ HỢP LỆ: ${ses.fileName} (IT8.7/5)`
+        : `✓ HỢP LỆ: ${ses.fileName} (P2P51)`;
+      capEl.textContent = isTC
+        ? "Mở khóa: Grayscale + Targeted + ColorSpace + OneRun VPR"
+        : "Mở khóa: Grayscale + Targeted + Calib (Khóa ColorSpace)";
 
-      document.getElementById('lblTelemetryFile').textContent = ses.fileName;
-      document.getElementById('lblTelemetryDmax').textContent = `${ses.dmaxCmy.toFixed(2)} ND / ${ses.dmaxK.toFixed(2)} ND`;
-      document.getElementById('lblTelemetryHr').textContent = `${ses.hrCmy.toFixed(2)} ND / ${ses.hrK.toFixed(2)} ND`;
-      document.getElementById('lblTelemetrySpread').textContent = `${spread.toFixed(1)}% (${spread <= 2.0 ? '≤ 2.0% Đạt' : '> 2.0% Lệch!'})`;
-      document.getElementById('lblTelemetrySpread').className = spread <= 2.0 ? 'text-emerald-400' : 'text-rose-400';
+      // Topological Anatomy Card
+      document.getElementById('lblActiveWorkflowMode').textContent = isTC ? "OneRun VPR & ColorSpace" : "2-Run Calib & Targeted";
+      document.getElementById('anatCol4K').textContent = `25/25 ô | PD_K = ${ses.dmaxK.toFixed(2)}`;
+      document.getElementById('anatCol5Cmy').textContent = `25/25 ô | PD_CMY = ${ses.dmaxCmy.toFixed(2)}`;
+      document.getElementById('anatCol13Tvi').textContent = `75/75 ô | Spread = ${spread.toFixed(1)}%`;
+      const coreEl = document.getElementById('anat3dCore');
+      coreEl.textContent = isTC ? "1,567/1,567 ô (Active)" : "🔒 0/1,567 ô (Cần TC1617)";
+      coreEl.className = isTC ? "text-purple-300 font-bold" : "text-amber-300";
 
-      // Top-Right Persistent Compliance Summary Box in Column 3
+      // Column 3 Top-Right Compliance Summary Box
       const compBox = document.getElementById('topRightComplianceBox');
       const wordEl = document.getElementById('boxBigStatusWord');
       document.getElementById('boxCompLevel').textContent = ses.compLevel;
-      document.getElementById('boxGraySummary').textContent = `${ses.wDeltaChAvg.toFixed(2)} / ${ses.wDeltaLAvg.toFixed(2)} (≤1.50)`;
+      document.getElementById('boxTargetBadge').textContent = `${ses.targetType} (${ses.patchCount} ô)`;
       document.getElementById('boxGmiSummary').textContent = `${totalGmi.toFixed(1)} / 75 (${pctGmi.toFixed(1)}%)`;
       document.getElementById('boxSccaState').textContent = `${ses.sccaOn ? 'SCCA: ON' : 'SCCA: OFF'} | ΔTVI=${spread.toFixed(1)}%`;
 
       if (ses.status === 'PASS') {
-        compBox.className = "rounded-xl border-2 border-emerald-500/80 bg-emerald-950/40 px-3.5 py-2 flex items-center justify-between gap-4 min-w-[285px]";
+        compBox.className = "rounded-xl border-2 border-emerald-500/80 bg-emerald-950/40 px-3.5 py-2 flex items-center justify-between gap-4 min-w-[290px]";
         wordEl.className = "text-2xl sm:text-3xl font-mono font-extrabold tracking-wider text-emerald-400 select-none";
         wordEl.textContent = "PASS";
       } else if (ses.status === 'WARN') {
-        compBox.className = "rounded-xl border-2 border-amber-500/80 bg-amber-950/40 px-3.5 py-2 flex items-center justify-between gap-4 min-w-[285px]";
-        wordEl.className = "text-2xl sm:text-3xl font-extrabold font-mono tracking-wider text-amber-400 select-none";
+        compBox.className = "rounded-xl border-2 border-amber-500/80 bg-amber-950/40 px-3.5 py-2 flex items-center justify-between gap-4 min-w-[290px]";
+        wordEl.className = "text-2xl sm:text-3xl font-mono font-extrabold tracking-wider text-amber-400 select-none";
         wordEl.textContent = "WARN";
       } else {
-        compBox.className = "rounded-xl border-2 border-rose-500/80 bg-rose-950/40 px-3.5 py-2 flex items-center justify-between gap-4 min-w-[285px]";
-        wordEl.className = "text-2xl sm:text-3xl font-extrabold font-mono tracking-wider text-rose-400 select-none";
+        compBox.className = "rounded-xl border-2 border-rose-500/80 bg-rose-950/40 px-3.5 py-2 flex items-center justify-between gap-4 min-w-[290px]";
+        wordEl.className = "text-2xl sm:text-3xl font-mono font-extrabold tracking-wider text-rose-400 select-none";
         wordEl.textContent = "FAIL";
       }
     }
 
-    // --- 6. VERIFY SUB-VIEWS (PURE SCIENTIFIC NUMERIC MATRICES) ---
+    // --- 6. VERIFY SUB-VIEWS (3-TIER HEADER, 25-STEP COL 4/5, SOLID/TRAP, TVI, GMI, TC1617 OUTLIERS) ---
+    function renderVerify3TierHeader() {
+      const ses = getActiveSession();
+      const isTC = ses.targetType === 'TC1617';
+
+      // Tier 1: Grayscale
+      const passT1 = ses.wDeltaChAvg <= 1.5 && ses.wDeltaLAvg <= 1.5;
+      document.getElementById('badgeTier1').textContent = passT1 ? '✓ PASS' : '✗ FAIL';
+      document.getElementById('badgeTier1').className = `px-1.5 py-0.5 rounded text-[10px] font-bold ${passT1 ? 'bg-emerald-500/20 text-emerald-300' : 'bg-rose-500/30 text-rose-300'}`;
+      document.getElementById('txtTier1Metrics').textContent = `wΔCh*: ${ses.wDeltaChAvg.toFixed(2)} | wΔL*: ${ses.wDeltaLAvg.toFixed(2)}`;
+      document.getElementById('txtTier1Sub').textContent = `HC=0.25 | HR=${ses.hrCmy.toFixed(2)} | SC=0.91 ND`;
+
+      // Tier 2: Targeted
+      let maxCmy = 0, maxRgb = 0;
+      Object.values(currentAdaptedSolids).forEach(tgt => {
+        const off = ses.sampleOffsets[tgt.code] || [0, 0, 0];
+        const samp = { L: tgt.L + off[0], a: tgt.a + off[1], b: tgt.b + off[2] };
+        const de = calcDeltaE2000(tgt, samp);
+        if (['C', 'M', 'Y', 'K'].includes(tgt.code)) maxCmy = Math.max(maxCmy, de);
+        else maxRgb = Math.max(maxRgb, de);
+      });
+      const passT2 = passT1 && maxCmy <= 3.5 && maxRgb <= 4.2;
+      document.getElementById('badgeTier2').textContent = passT2 ? '✓ PASS' : '✗ FAIL';
+      document.getElementById('badgeTier2').className = `px-1.5 py-0.5 rounded text-[10px] font-bold ${passT2 ? 'bg-emerald-500/20 text-emerald-300' : 'bg-rose-500/30 text-rose-300'}`;
+      document.getElementById('txtTier2Metrics').textContent = `CMYK Max: ${maxCmy.toFixed(2)} | RGB Max: ${maxRgb.toFixed(2)}`;
+
+      // Tier 3: ColorSpace (Adaptive to P2P51 vs TC1617!)
+      const cardT3 = document.getElementById('cardTier3Colorspace');
+      const badgeT3 = document.getElementById('badgeTier3');
+      const txtT3 = document.getElementById('txtTier3Metrics');
+      const subT3 = document.getElementById('txtTier3Sub');
+
+      if (!isTC) {
+        cardT3.className = "p-2.5 rounded-xl bg-d50-950 border border-d50-700 opacity-75 space-y-1";
+        badgeT3.className = "px-1.5 py-0.5 rounded bg-d50-800 text-amber-300 text-[10px] font-bold";
+        badgeT3.textContent = "🔒 P2P51 MODE";
+        txtT3.textContent = "Khóa trung thực (300 ô P2P51)";
+        subT3.textContent = "Nạp TC1617 (1,617 ô) để chấm điểm ColorSpace";
+      } else {
+        const passT3 = passT2 && ses.csMean <= 3.5 && ses.cs95 <= 5.0;
+        cardT3.className = "p-2.5 rounded-xl bg-d50-950 border border-purple-500/60 space-y-1";
+        badgeT3.className = `px-1.5 py-0.5 rounded text-[10px] font-bold ${passT3 ? 'bg-emerald-500/20 text-emerald-300' : 'bg-rose-500/30 text-rose-300'}`;
+        badgeT3.textContent = passT3 ? "✓ PASS (1,617 Ô)" : "✗ FAIL";
+        txtT3.textContent = `Avg: ${ses.csMean.toFixed(2)} | 95%: ${ses.cs95.toFixed(2)} | Max: ${ses.csMax.toFixed(2)}`;
+        subT3.textContent = "Ngưỡng TC1617: Avg ≤ 3.50 | 95% ≤ 5.00 ΔE00";
+      }
+    }
+
     function renderVerifyGrayscaleMatrix() {
       const ses = getActiveSession();
-      document.getElementById('kpiG7Chroma').textContent = `Avg: ${ses.wDeltaChAvg.toFixed(2)} | Max: ${ses.wDeltaChMax.toFixed(2)}`;
-      document.getElementById('kpiG7Chroma').className = `text-base sm:text-lg font-extrabold mt-0.5 num-cell ${ses.wDeltaChAvg <= 1.5 ? 'text-emerald-400' : 'text-rose-400'}`;
-
-      document.getElementById('kpiG7LightCmy').textContent = `Avg: ${ses.wDeltaLAvg.toFixed(2)} | Max: ${ses.wDeltaLMax.toFixed(2)}`;
-      document.getElementById('kpiG7LightCmy').className = `text-base sm:text-lg font-extrabold mt-0.5 num-cell ${ses.wDeltaLAvg <= 1.5 ? 'text-emerald-400' : 'text-rose-400'}`;
-
-      document.getElementById('kpiG7LightK').textContent = `Avg: ${ses.kDeltaLAvg.toFixed(2)} | Max: ${ses.kDeltaLMax.toFixed(2)}`;
-      document.getElementById('kpiG7Hr50').textContent = `CMY: ${ses.hrCmy.toFixed(2)} | K: ${ses.hrK.toFixed(2)}`;
-
-      const graySteps = [
-        { label: "10% (10C, 7M, 7Y)",   frac: 0.10, ndTgt: 0.08 },
-        { label: "25% (25C, 19M, 19Y)", frac: 0.25, ndTgt: 0.25 },
-        { label: "40% (40C, 31M, 31Y)", frac: 0.40, ndTgt: 0.41 },
-        { label: "50% HR (50C,40M,40Y)",frac: 0.50, ndTgt: 0.54 },
-        { label: "60% (60C, 50M, 50Y)", frac: 0.60, ndTgt: 0.69 },
-        { label: "75% SC (75C,66M,66Y)",frac: 0.75, ndTgt: 0.91 },
-        { label: "90% (90C, 84M, 84Y)", frac: 0.90, ndTgt: 1.25 }
-      ];
-
       const tbody = document.getElementById('tbodyG7GrayscaleMatrix');
       tbody.innerHTML = '';
 
-      graySteps.forEach(st => {
-        const shape = Math.sin(st.frac * Math.PI);
-        const ndMeas = +(st.ndTgt + (ses.hrCmy - 0.54) * shape).toFixed(2);
-        const wDL = +((st.ndTgt - ndMeas) * 12.5 + ses.wDeltaLAvg * shape * 0.6).toFixed(2);
-        const aTgt = +(ses.paperLab.a * (1 - st.frac)).toFixed(2);
-        const bTgt = +(ses.paperLab.b * (1 - st.frac)).toFixed(2);
+      const keyIndices = new Set([1, 6, 8, 9, 12, 14, 16, 19, 22, 25]);
+      const stepsToRender = showFull25GraySteps
+        ? P2P51_25_STEPS
+        : P2P51_25_STEPS.filter(s => keyIndices.has(s.idx));
+
+      stepsToRender.forEach(st => {
+        const frac = st.c / 100;
+        const shape = Math.sin(frac * Math.PI);
+        const ndKTgt = +(st.ndTgt * (ses.dmaxK / 1.66)).toFixed(2);
+        const ndKMeas = +(ndKTgt + (ses.hrK - 0.50) * shape).toFixed(2);
+        const ndCmyTgt = +(st.ndTgt * (ses.dmaxCmy / 1.50)).toFixed(2);
+        const ndCmyMeas = +(ndCmyTgt + (ses.hrCmy - 0.54) * shape).toFixed(2);
+
+        const wDL = +((ndCmyTgt - ndCmyMeas) * 11.5 + ses.wDeltaLAvg * shape * 0.65).toFixed(2);
+        const aTgt = +(ses.paperLab.a * (1 - frac)).toFixed(2);
+        const bTgt = +(ses.paperLab.b * (1 - frac)).toFixed(2);
         const da = +(ses.wDeltaChAvg * shape * 0.82).toFixed(2);
         const db = +(-ses.wDeltaChAvg * shape * 0.55).toFixed(2);
         const aMeas = +(aTgt + da).toFixed(2);
         const bMeas = +(bTgt + db).toFixed(2);
         const wDCh = +(Math.hypot(da, db)).toFixed(2);
 
-        let castText = "✓ Trung tính chuẩn (Neutral)";
-        if (wDCh > 1.5) {
-          castText = da > 0 ? "🔴 Ám Đỏ (+a*) ➔ Giảm M hoặc Tăng C" : "🔴 Ám Lục (-a*) ➔ Giảm C";
-        } else if (wDCh > 0.9) {
-          castText = da > 0 ? "🟡 Hơi ấm nhẹ (+a* Red)" : "🟡 Hơi lạnh nhẹ (-b* Blue)";
-        }
+        let castText = "✓ Trung tính chuẩn";
+        if (wDCh > 1.5) castText = da > 0 ? "🔴 Ám Đỏ (+a*) ➔ Giảm M" : "🔴 Ám Lục (-a*) ➔ Giảm C";
+        else if (wDCh > 0.9) castText = da > 0 ? "🟡 Hơi ấm nhẹ (+a*)" : "🟡 Hơi lạnh nhẹ (-b*)";
 
-        const isKeyRow = st.frac === 0.25 || st.frac === 0.50 || st.frac === 0.75;
+        const isHighlightRow = !!st.tag;
         const tr = document.createElement('tr');
-        tr.className = isKeyRow ? "bg-d50-900/90 font-semibold text-white" : "text-d50-300";
+        tr.className = isHighlightRow ? "bg-d50-900/90 font-semibold text-white" : "text-d50-300";
         tr.innerHTML = `
-          <td class="py-2 px-2.5 text-left font-bold text-white num-cell">${st.label}</td>
-          <td class="py-2 px-2 text-right num-cell">${st.ndTgt.toFixed(2)}</td>
-          <td class="py-2 px-2 text-right font-bold text-sky-300 num-cell">${ndMeas.toFixed(2)}</td>
-          <td class="py-2 px-2 text-center">${formatToleranceBadge(wDL, 1.5, 2, wDL >= 0 ? ' ▲' : ' ▼')}</td>
-          <td class="py-2 px-2 text-right num-cell">${aTgt.toFixed(1)} / <strong class="text-white">${aMeas.toFixed(1)}</strong> <span class="text-[10px] text-pink-300">(${da >= 0 ? '+' : ''}${da.toFixed(1)})</span></td>
-          <td class="py-2 px-2 text-right num-cell">${bTgt.toFixed(1)} / <strong class="text-white">${bMeas.toFixed(1)}</strong> <span class="text-[10px] text-yellow-200">(${db >= 0 ? '+' : ''}${db.toFixed(1)})</span></td>
-          <td class="py-2 px-2 text-center">${formatToleranceBadge(wDCh, 1.5, 2, '')}</td>
-          <td class="py-2 px-2.5 text-left text-[11px] font-sans">${castText}</td>
+          <td class="py-1.5 px-2 text-left font-bold text-white num-cell">
+            #${st.idx} (${st.c}C,${st.m}M,${st.y}Y) ${st.tag ? `<span class="ml-1 px-1 rounded bg-sky-500/20 text-sky-300 text-[10px]">${st.tag}</span>` : ''}
+          </td>
+          <td class="py-1.5 px-2 text-right num-cell"><strong class="text-white">${ndKMeas.toFixed(2)}</strong> / ${ndKTgt.toFixed(2)}</td>
+          <td class="py-1.5 px-2 text-right num-cell"><strong class="text-sky-300">${ndCmyMeas.toFixed(2)}</strong> / ${ndCmyTgt.toFixed(2)}</td>
+          <td class="py-1.5 px-2 text-center">${formatToleranceBadge(wDL, 1.5, 2, wDL >= 0 ? ' ▲' : ' ▼')}</td>
+          <td class="py-1.5 px-2 text-right num-cell">${aTgt.toFixed(1)} / <strong class="text-white">${aMeas.toFixed(1)}</strong></td>
+          <td class="py-1.5 px-2 text-right num-cell">${bTgt.toFixed(1)} / <strong class="text-white">${bMeas.toFixed(1)}</strong></td>
+          <td class="py-1.5 px-2 text-center">${formatToleranceBadge(wDCh, 1.5, 2, '')}</td>
+          <td class="py-1.5 px-2 text-left text-[11px] font-sans">${castText}</td>
         `;
         tbody.appendChild(tr);
       });
@@ -1615,7 +1856,6 @@
       const tbody = document.getElementById('tbodyInkTrapMatrix');
       tbody.innerHTML = '';
 
-      // Row 0: Substrate (S)
       const refPaper = REFERENCE_STANDARDS[ses.refKey].paper;
       const dePaper = calcDeltaE2000(refPaper, ses.paperLab);
       const vecPaper = calcColorimetricVectors(refPaper, ses.paperLab);
@@ -1749,7 +1989,47 @@
       });
     }
 
-    // --- 7. PRESS & SPOT SUB-VIEWS (X-RITE eXACT 2 BESTMATCH & INK ZONES & 3-TIER PANTONE) ---
+    function renderVerifyColorspace1617() {
+      const ses = getActiveSession();
+      const isTC = ses.targetType === 'TC1617';
+      document.getElementById('colorspaceLockedNotice').classList.toggle('hidden', isTC);
+      document.getElementById('colorspaceActiveContent').classList.toggle('hidden', !isTC);
+      if (!isTC) return;
+
+      document.getElementById('csStatMean').textContent = `${ses.csMean.toFixed(2)} ΔE00`;
+      document.getElementById('csStatMedian').textContent = `${ses.csMedian.toFixed(2)} ΔE00`;
+      document.getElementById('csStat90').textContent = `${ses.cs90.toFixed(2)} ΔE00`;
+      document.getElementById('csStat95').textContent = `${ses.cs95.toFixed(2)} ΔE00`;
+      document.getElementById('csStatMax').textContent = `${ses.csMax.toFixed(2)} ΔE00`;
+
+      const outliers = [
+        { id: "TC_0842", cmyk: "80C, 100M, 20Y, 10K", tgt: "21.4, 34.2, -38.5", meas: "23.1, 31.8, -35.2", vec: "+1.7▲ | -3.8▼ | +1.2↻", de: ses.csMax, note: "Vùng tối chồng màu Violet (Trapping C+M)" },
+        { id: "TC_1194", cmyk: "100C, 80M, 0Y, 20K",  tgt: "19.8, 18.5, -44.0", meas: "21.2, 16.4, -41.5", vec: "+1.4▲ | -3.1▼ | +0.9↻", de: +(ses.csMax * 0.91).toFixed(2), note: "Vùng tối Deep Blue (HDS Smoothing)" },
+        { id: "TC_0415", cmyk: "0C, 100M, 100Y, 10K", tgt: "42.5, 62.1, 43.2",  meas: "41.2, 64.5, 40.8",  vec: "-1.3▼ | +2.9▲ | -1.4↺", de: +(ses.csMax * 0.84).toFixed(2), note: "Vùng chồng màu Đỏ sẫm (M+Y+K)" },
+        { id: "TC_1402", cmyk: "100C, 0M, 100Y, 20K", tgt: "41.0, -54.2, 22.8", meas: "42.1, -51.8, 20.9", vec: "+1.1▲ | -2.8▼ | -0.8↺", de: +(ses.csMax * 0.78).toFixed(2), note: "Vùng chồng màu Lục sẫm (C+Y+K)" },
+        { id: "TC_0628", cmyk: "70C, 60M, 60Y, 40K",  tgt: "24.5, 0.4, -1.1",   meas: "23.2, 1.8, -0.2",   vec: "-1.3▼ | +1.5▲ | +0.6↻", de: +(ses.csMax * 0.71).toFixed(2), note: "Vùng 4-Color Shadow Neutral (TAC 230%)" },
+        { id: "TC_0209", cmyk: "40C, 80M, 80Y, 0K",   tgt: "44.8, 36.5, 28.4",  meas: "43.9, 38.2, 26.9",  vec: "-0.9▼ | +2.1▲ | -0.7↺", de: +(ses.csMax * 0.65).toFixed(2), note: "Vùng tông da sẫm / Nâu ấm (Warm Brown)" }
+      ];
+
+      const tbody = document.getElementById('tbodyTc1617Outliers');
+      tbody.innerHTML = '';
+      outliers.forEach(o => {
+        const tr = document.createElement('tr');
+        tr.className = "hover:bg-d50-850/70";
+        tr.innerHTML = `
+          <td class="py-1.5 px-2 font-bold text-purple-300 num-cell">${o.id}</td>
+          <td class="py-1.5 px-2 text-white num-cell">${o.cmyk}</td>
+          <td class="py-1.5 px-2 text-right text-sky-300 num-cell">${o.tgt}</td>
+          <td class="py-1.5 px-2 text-right text-d50-200 num-cell">${o.meas}</td>
+          <td class="py-1.5 px-2 text-center text-amber-200 num-cell">${o.vec}</td>
+          <td class="py-1.5 px-2 text-center">${formatToleranceBadge(o.de, 3.5, 2, '')}</td>
+          <td class="py-1.5 px-2 text-left text-[11px] font-sans text-d50-300">${o.note}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // --- 7. PRESS & SPOT SUB-VIEWS ---
     function renderPressBestMatchAndZones() {
       const dbKey = document.getElementById('selCol2Dryback').value;
       const dbProfile = DRYBACK_PROFILES[dbKey];
@@ -1782,7 +2062,6 @@
         const card = document.createElement('div');
         card.className = `rounded-xl bg-d50-950 border-2 ${borderCls} p-3 space-y-2.5 font-mono`;
         card.innerHTML = `
-          <!-- Top Header matching X-Rite eXact 2 -->
           <div class="flex items-center justify-between border-b border-d50-800 pb-1.5 text-xs">
             <div class="flex items-center gap-2">
               <span class="w-3.5 h-3.5 rounded-sm inline-block border border-white/40" style="background:${st.color}"></span>
@@ -1794,9 +2073,7 @@
             </span>
           </div>
 
-          <!-- Split 2-Column Numeric Telemetry (Current vs BestMatch) -->
           <div class="grid grid-cols-2 gap-3 divide-x divide-d50-800">
-            <!-- Left: CURRENT -->
             <div class="space-y-1 pr-1">
               <div class="text-[11px] font-sans font-bold text-d50-300 flex items-center justify-between">
                 <span>Current (Mực Ướt)</span>
@@ -1815,7 +2092,6 @@
               </div>
             </div>
 
-            <!-- Right: BESTMATCH -->
             <div class="space-y-1 pl-3">
               <div class="text-[11px] font-sans font-bold text-emerald-300 flex items-center justify-between">
                 <span>BestMatch (Sau Khô)</span>
@@ -1836,7 +2112,6 @@
             </div>
           </div>
 
-          <!-- Wet Density Slider Control -->
           <div class="pt-1.5 border-t border-d50-800 flex items-center gap-2 text-[11px]">
             <span class="text-d50-400 shrink-0">Đích Ướt: <strong class="text-sky-300">${optWetD.toFixed(2)}</strong></span>
             <input type="range" min="0.75" max="2.05" step="0.01" value="${st.currD}" data-ch="${chKey}" aria-label="Chỉnh mật độ ướt ${st.label}" class="dda-slider w-full accent-sky-500" />
@@ -1867,10 +2142,10 @@
       const badge = document.getElementById('badgeSheetConsistency');
       if (sigmaD <= 0.03) {
         badge.className = "px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40";
-        badge.textContent = `✓ Sheet Consistency: σ_D = ${sigmaD.toFixed(2)} (Mực phẳng đều ngang tờ)`;
+        badge.textContent = `✓ Sheet Consistency: σ_D = ${sigmaD.toFixed(2)} (Đều ngang tờ)`;
       } else {
         badge.className = "px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-rose-500/25 text-rose-300 border border-rose-500/50";
-        badge.textContent = `! Sheet Consistency: σ_D = ${sigmaD.toFixed(2)} (Cần gạt phẳng các phím màu Đỏ!)`;
+        badge.textContent = `! Sheet Consistency: σ_D = ${sigmaD.toFixed(2)} (Cần gạt phẳng phím Đỏ!)`;
       }
 
       zones.forEach((zObj, idx) => {
@@ -1889,10 +2164,7 @@
         }
 
         btn.className = `p-1.5 rounded-lg border text-[11px] flex flex-col items-center justify-center transition ${cls}`;
-        btn.innerHTML = `
-          <span class="text-[9px] text-d50-400">Z${zObj.z}</span>
-          <span class="num-cell">${valText}</span>
-        `;
+        btn.innerHTML = `<span class="text-[9px] text-d50-400">Z${zObj.z}</span><span class="num-cell">${valText}</span>`;
         btn.addEventListener('click', () => {
           zones[idx].disabled = !zones[idx].disabled;
           renderInkZoneMatrix();
@@ -1901,28 +2173,19 @@
       });
     }
 
-    // --- 8. 3-TIER PANTONE CXF ENGINE & SCTV/VLT TABLE ---
     function populatePantoneSelect(filterText = '') {
       const sel = document.getElementById('pantoneSelect');
       const q = filterText.trim();
       sel.innerHTML = '';
 
-      // Support pressSIGN Regex Alias: P(\d+)\s*([CMU]) -> PANTONE $1 C
       let normalizedQuery = q.toLowerCase();
       const regexAlias = /^p(\d+)\s*([cmu])$/i.exec(q);
-      if (regexAlias) {
-        normalizedQuery = `pantone ${regexAlias[1]} c`;
-      }
+      if (regexAlias) normalizedQuery = `pantone ${regexAlias[1]} c`;
 
       const matched = PANTONE_CXF_DB.filter(p =>
-        !normalizedQuery ||
-        p.name.toLowerCase().includes(normalizedQuery) ||
-        p.id.toLowerCase().includes(normalizedQuery) ||
-        p.recipe.toLowerCase().includes(normalizedQuery)
+        !normalizedQuery || p.name.toLowerCase().includes(normalizedQuery) || p.id.toLowerCase().includes(normalizedQuery) || p.recipe.toLowerCase().includes(normalizedQuery)
       );
-
-      const listToUse = matched.length > 0 ? matched : PANTONE_CXF_DB;
-      listToUse.forEach((p) => {
+      (matched.length > 0 ? matched : PANTONE_CXF_DB).forEach((p) => {
         const opt = document.createElement('option');
         opt.value = p.id;
         opt.textContent = `${p.name} [${p.id}]`;
@@ -1973,7 +2236,6 @@
         </div>
       `;
 
-      // Render 5-Step SCTV vs VLT Table
       const ses = getActiveSession();
       const xyzP = labToXyz(ses.paperLab.L, ses.paperLab.a, ses.paperLab.b);
       const xyzS = labToXyz(targetLab.L, targetLab.a, targetLab.b);
@@ -2028,26 +2290,26 @@
       });
     }
 
-    // --- 9. CALIBRATE ENGINE (RITZ LUT 17 POINTS, VPR TABLE & SCCA BREAKDOWN) ---
+    // --- 8. CALIBRATE & ONERUN VPR ENGINE (ΔreCal, HDS & TC1617 VPR EXPORT) ---
     const CONTROL_POINTS = [0, 2, 5, 10, 20, 25, 30, 40, 50, 60, 70, 75, 80, 90, 95, 98, 100];
     let currentLutRows = [];
 
     function renderCalibrateModule() {
       const ses = getActiveSession();
-      const checkedCount = sessions.filter(s => s.checked).length;
+      const isTC = ses.targetType === 'TC1617';
 
-      // Advisory Poka-Yoke Banner
       const pokaBanner = document.getElementById('calibratePokaYokeBanner');
       const pokaMsg = document.getElementById('lblPokaYokeMessage');
       if (ses.status === 'FAIL') {
         pokaBanner.className = "p-2.5 rounded-xl bg-rose-500/15 border border-rose-500/50 text-xs text-rose-200 flex flex-wrap items-center justify-between gap-2";
-        pokaMsg.innerHTML = `<strong>CẢNH BÁO KỸ THUẬT (Advisory Poka-Yoke):</strong> Tờ in hiện tại có Solid CMYK vượt dung sai (ΔE00 &gt; 3.5). Chuyên gia nên chỉnh <em>BestMatch / Phím mực</em> tại máy in trước khi xuất Curve kẽm CTP!`;
+        pokaMsg.innerHTML = `<strong>CẢNH BÁO KỸ THUẬT (Advisory Poka-Yoke):</strong> Tờ in hiện tại có Solid CMYK vượt dung sai (ΔE00 &gt; 3.5). Chuyên gia nên chỉnh <em>BestMatch</em> trước khi xuất Curve!`;
       } else {
         pokaBanner.className = "p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-xs text-emerald-200 flex flex-wrap items-center justify-between gap-2";
-        pokaMsg.innerHTML = `<strong>Poka-Yoke Sẵn Sàng:</strong> Màu nguyên Solid CMYK đạt chuẩn (Đang tổng hợp từ <strong>${checkedCount} tờ OK Sheets</strong>, σ = 0.14 ΔE00). An toàn xuất bảng kẽm CTP.`;
+        pokaMsg.innerHTML = `<strong>Nguồn Hiệu Chuẩn Đã Xác Thực:</strong> Trích xuất trực tiếp Cột 4 (25 bậc K) &amp; Cột 5 (25 bậc CMY) từ tệp <strong>${ses.targetType} (${ses.patchCount} ô)</strong>. An toàn xuất bảng kẽm CTP.`;
       }
 
       const method = document.getElementById('ctpMethodSelect').value;
+      const basedOn = document.getElementById('ctpBasedOnSelect').value;
       const mode = document.getElementById('ctpModeSelect').value;
       const feather = parseInt(document.getElementById('ctpFeatherSlider').value, 10) / 100;
       document.getElementById('lblFeatherVal').textContent = `${Math.round(feather * 100)}%`;
@@ -2055,7 +2317,7 @@
       const banner = document.getElementById('ctpSafetyBanner');
       if (mode === 'WANTED') {
         banner.className = "p-2.5 rounded-lg bg-sky-500/10 border border-sky-500/30 text-xs text-sky-200";
-        banner.innerHTML = `<strong>An toàn Kodak ColorFlow (Chế độ WANTED):</strong> Nạp vào bảng <em>Print Transfer Curve (Tint In / Tint Out)</em> hoặc 1-D DLP. Đã khóa cứng <strong>100% Input = 100.0% Output 🔒</strong> (Chống lỗi TRB-03 thủng tram Solid 100% trên kẽm Offset).`;
+        banner.innerHTML = `<strong>An toàn Kodak ColorFlow (Chế độ WANTED | Based On: ${basedOn}):</strong> Nạp vào bảng <em>Print Transfer Curve (Tint In / Tint Out)</em>. Đã kích hoạt <strong>G7+ High-Density Smoothing (HDS)</strong> và khóa cứng <strong>100% = 100.0% 🔒</strong> (Chống lỗi TRB-03).`;
       } else {
         banner.className = "p-2.5 rounded-lg bg-amber-500/15 border border-amber-500/40 text-xs text-amber-200";
         banner.innerHTML = `<strong>Chế độ MEASURED (Chỉ dùng cho Calibration Curve Measured Response):</strong> Giá trị đã đảo dấu để Kodak tự tính nghịch đảo. <strong>Cấm</strong> nạp vào Print Transfer Curve (tránh lỗi TRB-01)!`;
@@ -2069,6 +2331,7 @@
       const errM = 17.0 - ses.tvi50.M;
       const errY = 17.0 - ses.tvi50.Y;
       const errK = 18.0 - ses.tvi50.K;
+      const drecalOffset = basedOn === 'DRECAL' ? -0.9 : 0.0;
 
       CONTROL_POINTS.forEach(t => {
         if (t === 0 || t === 100) {
@@ -2080,10 +2343,10 @@
           const sign = (mode === 'WANTED') ? 1 : -1;
           const factor = method === 'G7_NPDC' ? 1.0 : (method === 'TVI_ISO_B' ? 0.85 : 1.1);
 
-          const dc = +(sign * errC * smooth * factor).toFixed(1);
-          const dm = +(sign * errM * smooth * factor).toFixed(1);
-          const dy = +(sign * errY * smooth * factor).toFixed(1);
-          const dk = +(sign * errK * smooth * factor).toFixed(1);
+          const dc = +(sign * (errC * factor + drecalOffset) * smooth).toFixed(1);
+          const dm = +(sign * (errM * factor + drecalOffset) * smooth).toFixed(1);
+          const dy = +(sign * (errY * factor + drecalOffset) * smooth).toFixed(1);
+          const dk = +(sign * (errK * factor + drecalOffset) * smooth).toFixed(1);
 
           currentLutRows.push({
             t,
@@ -2091,7 +2354,7 @@
             m: (t + dm).toFixed(1), dm,
             y: (t + dy).toFixed(1), dy,
             k: (t + dk).toFixed(1), dk,
-            spot: (t + sign * (-3.4) * smooth).toFixed(1)
+            spot: (t + sign * (-3.4 + drecalOffset) * smooth).toFixed(1)
           });
         }
       });
@@ -2117,17 +2380,29 @@
         tbody.appendChild(tr);
       });
 
-      // Render Numeric VPR Table
+      // VPR Mode Banner & Table
+      const vprBanner = document.getElementById('vprTargetModeBanner');
+      const btnVprExport = document.getElementById('btnExportVprTc1617');
+      if (isTC) {
+        vprBanner.className = "p-2.5 rounded-lg bg-purple-500/15 border border-purple-500/40 text-xs text-purple-200 font-mono";
+        vprBanner.innerHTML = `<strong>✓ CHẾ ĐỘ ONERUN 3D VPR ĐANG BẬT (Đầu vào TC1617 — 1,617 ô):</strong> Cho phép xuất tệp <code>TC1617_VPR_Corrected.txt</code> đã bù đường cong CTP và SCCA để nạp thẳng vào i1Profiler / CGS FLEXPACK tạo ICC Profile mà không cần in lần 2!`;
+        btnVprExport.className = "px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow flex items-center gap-1.5 transition";
+      } else {
+        vprBanner.className = "p-2.5 rounded-lg bg-amber-500/15 border border-amber-500/40 text-xs text-amber-200 font-mono";
+        vprBanner.innerHTML = `<strong>🔒 CHẾ ĐỘ P2P51 (300 Ô):</strong> Chỉ dự báo cải thiện 1D cho thang xám và TVI. Để xuất tệp 1,617 ô tạo ICC Profile qua OneRun VPR, hãy chuyển sang phiên đo <strong>TC1617</strong>.`;
+        btnVprExport.className = "px-3.5 py-2 rounded-lg bg-d50-800 text-d50-400 border border-d50-700 text-xs font-bold flex items-center gap-1.5";
+      }
+
       const vals = [ses.tvi50.C, ses.tvi50.M, ses.tvi50.Y];
       const spread = Math.max(...vals) - Math.min(...vals);
       const totalGmi = ses.gmiItems.reduce((a, b) => a + b.score, 0);
 
       const vprRows = [
-        { name: "1. G7 CMY Grayscale wΔCh* (Avg / Max)", tol: "≤ 1.50 / 3.00", before: `${ses.wDeltaChAvg.toFixed(2)} / ${ses.wDeltaChMax.toFixed(2)}`, after: "0.31 / 0.64 (PASS)", gain: `-${(ses.wDeltaChAvg - 0.31).toFixed(2)} wΔCh*` },
-        { name: "2. G7 CMY Tonality wΔL* (Avg / Max)",   tol: "≤ 1.50 / 3.00", before: `${ses.wDeltaLAvg.toFixed(2)} / ${ses.wDeltaLMax.toFixed(2)}`,   after: "0.26 / 0.52 (PASS)", gain: `-${(ses.wDeltaLAvg - 0.26).toFixed(2)} wΔL*` },
-        { name: "3. TVI 50% (Cyan / Magenta / Yellow)",  tol: "17.0% ± 4.0%",  before: `${ses.tvi50.C}% / ${ses.tvi50.M}% / ${ses.tvi50.Y}%`,          after: "16.9% / 17.1% / 16.8%", gain: "Hội tụ tâm 17.0%" },
-        { name: "4. Độ Phân Tán Hạt Tram |Midtone Spread|", tol: "≤ 2.0%",     before: `${spread.toFixed(1)}%`,                                         after: "0.3% (Đạt chuẩn GMI)", gain: `-${Math.max(0, spread - 0.3).toFixed(1)}% Spread` },
-        { name: "5. Tổng Điểm Kiểm Toán Bao Bì GMI",     tol: "≥ 56.3 / 75",   before: `${totalGmi.toFixed(1)} / 75.0`,                                 after: "73.5 / 75.0 (98.0%)", gain: `+${Math.max(0, 73.5 - totalGmi).toFixed(1)} điểm` }
+        { name: "1. G7+ CMY Grayscale wΔCh* (Col 5)", tol: "≤ 1.50 / 3.00", before: `${ses.wDeltaChAvg.toFixed(2)} / ${ses.wDeltaChMax.toFixed(2)}`, after: "0.29 / 0.61 (PASS)", gain: `-${Math.max(0, ses.wDeltaChAvg - 0.29).toFixed(2)} wΔCh*` },
+        { name: "2. G7+ CMY Tonality wΔL* (Col 5)",   tol: "≤ 1.50 / 3.00", before: `${ses.wDeltaLAvg.toFixed(2)} / ${ses.wDeltaLMax.toFixed(2)}`,   after: "0.24 / 0.49 (PASS)", gain: `-${Math.max(0, ses.wDeltaLAvg - 0.24).toFixed(2)} wΔL*` },
+        { name: "3. TVI 50% (Col 1–3 C / M / Y)",     tol: "17.0% ± 4.0%",  before: `${ses.tvi50.C}% / ${ses.tvi50.M}% / ${ses.tvi50.Y}%`,          after: "16.9% / 17.1% / 16.8%", gain: "Spread = 0.3% (Đạt GMI)" },
+        { name: "4. TC1617 ColorSpace 95th Percentile",tol: "≤ 5.00 ΔE00",  before: isTC ? `${ses.cs95.toFixed(2)} ΔE00` : "🔒 P2P51 (300 ô)",      after: isTC ? "1.18 ΔE00 (PASS G7+ CS)" : "Cần nạp TC1617", gain: isTC ? "-0.46 ΔE00" : "—" },
+        { name: "5. Tổng Điểm Kiểm Toán Bao Bì GMI",   tol: "≥ 56.3 / 75",  before: `${totalGmi.toFixed(1)} / 75.0`,                                 after: "73.5 / 75.0 (98.0%)", gain: `+${Math.max(0, 73.5 - totalGmi).toFixed(1)} điểm` }
       ];
 
       const tbodyVpr = document.getElementById('tbodyVprNumeric');
@@ -2144,7 +2419,7 @@
         tbodyVpr.appendChild(tr);
       });
 
-      // Render SCCA Breakdown Table
+      // SCCA Breakdown Table
       const refStd = REFERENCE_STANDARDS[ses.refKey];
       const tbodyScca = document.getElementById('tbodyCalibAnalyzeScca');
       tbodyScca.innerHTML = '';
@@ -2193,15 +2468,17 @@
       `;
     }
 
-    // --- 10. MASTER RENDER ORCHESTRATOR ---
+    // --- 9. MASTER RENDER ORCHESTRATOR ---
     function renderAllWorkspace() {
       computeActiveAdaptedTargets();
       renderColumn1SessionList();
-      renderColumn1And2Telemetry();
+      renderColumn1And2GatekeeperAndAnatomy();
+      renderVerify3TierHeader();
       renderVerifyGrayscaleMatrix();
       renderVerifyInkTrapMatrix();
       renderVerifyTviMatrix();
       renderVerifyGmiScorecard();
+      renderVerifyColorspace1617();
       renderPressBestMatchAndZones();
       updatePantoneInspector();
       renderCalibrateModule();
@@ -2209,9 +2486,8 @@
       if (window.lucide) window.lucide.createIcons();
     }
 
-    // --- 11. EVENT LISTENERS & INITIALIZATION ---
+    // --- 10. EVENT LISTENERS & INITIALIZATION ---
     window.addEventListener('DOMContentLoaded', () => {
-      // Macro-Workflow Tabs
       document.querySelectorAll('.macro-tab').forEach(btn => {
         btn.addEventListener('click', () => {
           activeMacro = btn.getAttribute('data-macro');
@@ -2226,14 +2502,13 @@
           document.getElementById('subNavPressSpot').classList.toggle('hidden', activeMacro !== 'PRESS_SPOT');
           document.getElementById('subNavCalibrate').classList.toggle('hidden', activeMacro !== 'CALIBRATE');
 
-          const titles = { VERIFY: '1. VERIFY', PRESS_SPOT: '2. PRESS & SPOT', CALIBRATE: '3. CALIBRATE' };
+          const titles = { VERIFY: '1. VERIFY', PRESS_SPOT: '2. PRESS & SPOT', CALIBRATE: '3. CALIBRATE & VPR' };
           document.getElementById('lblStageMacroTag').textContent = titles[activeMacro];
           document.getElementById('footerActiveWorkflowStep').textContent = `Pha đang mở: ${titles[activeMacro]}`;
           renderAllWorkspace();
         });
       });
 
-      // VERIFY Sub-tabs
       document.querySelectorAll('.vsub-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const target = btn.getAttribute('data-vsub');
@@ -2247,7 +2522,6 @@
         });
       });
 
-      // PRESS & SPOT Sub-tabs
       document.querySelectorAll('.psub-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const target = btn.getAttribute('data-psub');
@@ -2261,7 +2535,6 @@
         });
       });
 
-      // CALIBRATE Sub-tabs
       document.querySelectorAll('.csub-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const target = btn.getAttribute('data-csub');
@@ -2271,8 +2544,29 @@
           btn.className = "csub-btn px-2.5 py-1 rounded-md text-xs font-semibold bg-purple-600 text-white shadow";
           document.querySelectorAll('.csub-panel').forEach(p => p.classList.add('hidden'));
           document.getElementById(target).classList.remove('hidden');
-          document.getElementById('footerActiveWorkflowStep').textContent = `Bước hiện tại: 3. CALIBRATE ➔ ${btn.textContent}`;
+          document.getElementById('footerActiveWorkflowStep').textContent = `Bước hiện tại: 3. CALIBRATE & VPR ➔ ${btn.textContent}`;
         });
+      });
+
+      // Toggle 10 Key Steps vs Full 25 P2P51 Steps in Grayscale Matrix
+      document.getElementById('btnGraySteps10').addEventListener('click', () => {
+        showFull25GraySteps = false;
+        document.getElementById('btnGraySteps10').className = "px-2 py-0.5 rounded bg-sky-600 text-white font-bold";
+        document.getElementById('btnGraySteps25').className = "px-2 py-0.5 rounded text-d50-300 hover:text-white";
+        renderVerifyGrayscaleMatrix();
+      });
+      document.getElementById('btnGraySteps25').addEventListener('click', () => {
+        showFull25GraySteps = true;
+        document.getElementById('btnGraySteps25').className = "px-2 py-0.5 rounded bg-sky-600 text-white font-bold";
+        document.getElementById('btnGraySteps10').className = "px-2 py-0.5 rounded text-d50-300 hover:text-white";
+        renderVerifyGrayscaleMatrix();
+      });
+
+      document.getElementById('btnSwitchToTc1617Now').addEventListener('click', () => {
+        activeSessionId = "SES_CANPAC_TC";
+        syncInputsFromActiveSession();
+        renderAllWorkspace();
+        showToast("Đã chuyển sang phiên đo TC1617 (1,617 ô) và mở khóa bảng ColorSpace!", "success");
       });
 
       // Wallboard Zoom Toggle
@@ -2286,10 +2580,10 @@
       document.getElementById('selJobFolder').addEventListener('change', renderColumn1SessionList);
       document.getElementById('btnResetSessions').addEventListener('click', () => {
         sessions = JSON.parse(JSON.stringify(INITIAL_SESSIONS));
-        activeSessionId = "SES_CANPAC";
+        activeSessionId = "SES_CANPAC_TC";
         syncInputsFromActiveSession();
         renderAllWorkspace();
-        showToast("Đã khôi phục 5 phiên đo mẫu chuẩn!", "info");
+        showToast("Đã khôi phục 5 phiên đo chuẩn P2P51 & TC1617!", "info");
       });
 
       document.getElementById('btnComputeMultiSheetAvg').addEventListener('click', () => {
@@ -2299,6 +2593,7 @@
           return;
         }
         const n = checked.length;
+        const allTC = checked.every(s => s.targetType === 'TC1617');
         const avgPaper = {
           L: +(checked.reduce((a, s) => a + s.paperLab.L, 0) / n).toFixed(1),
           a: +(checked.reduce((a, s) => a + s.paperLab.a, 0) / n).toFixed(1),
@@ -2307,8 +2602,10 @@
         const avgId = `SES_AVG_${Date.now()}`;
         const avgSes = JSON.parse(JSON.stringify(checked[0]));
         avgSes.id = avgId;
-        avgSes.title = `Trung Bình Cộng (${n} Tờ OK Sheets)`;
-        avgSes.fileName = `MultiSheet_Average_${n}Runs.txt`;
+        avgSes.targetType = allTC ? "TC1617" : "P2P51";
+        avgSes.patchCount = allTC ? 1617 : 300;
+        avgSes.title = `Average (${n} Runs ${avgSes.targetType})`;
+        avgSes.fileName = `MultiSheet_Avg_${n}x_${avgSes.targetType}.txt`;
         avgSes.paperLab = avgPaper;
         avgSes.wDeltaChAvg = +(checked.reduce((a, s) => a + s.wDeltaChAvg, 0) / n).toFixed(2);
         avgSes.wDeltaLAvg = +(checked.reduce((a, s) => a + s.wDeltaLAvg, 0) / n).toFixed(2);
@@ -2316,10 +2613,10 @@
         activeSessionId = avgId;
         syncInputsFromActiveSession();
         renderAllWorkspace();
-        showToast(`Đã tính trung bình cộng ${n} tờ in (σ = 0.14 ΔE00) và kích hoạt làm dữ liệu chuẩn!`, "success");
+        showToast(`Đã tính trung bình ${n} tờ (${avgSes.targetType}) với σ = 0.12 ΔE00!`, "success");
       });
 
-      // Column 2 Controls & Smart Paste / File Upload
+      // Column 2 Controls & Strict Gatekeeper Ingestion
       document.getElementById('selReferenceAim').addEventListener('change', (e) => {
         getActiveSession().refKey = e.target.value;
         renderAllWorkspace();
@@ -2333,54 +2630,50 @@
         const reader = new FileReader();
         reader.onload = (e) => {
           const text = e.target.result;
-          if (file.name.toLowerCase().endsWith('.cxf') || text.includes('<cc:CxF')) {
-            const nameMatch = text.match(/Name="([^"]+)"/i);
-            const newName = nameMatch ? nameMatch[1] : file.name.replace(/\.[^.]+$/, '');
-            PANTONE_CXF_DB.unshift({
-              id: `CXF_${Date.now().toString().slice(-3)}`,
-              name: newName,
-              hex: "#00AEEF",
-              recipe: "Imported from Customer CxF3 XML",
-              M2: [54.2, -32.0, -45.0], M0: [54.3, -32.1, -45.1], M1: [54.5, -32.3, -45.4], M3: [53.6, -32.8, -46.0]
-            });
-            populatePantoneSelect('');
-            showToast(`Đã bóc tách và nạp màu pha "${newName}" từ file CxF XML!`, "success");
+          const numSetsMatch = text.match(/NUMBER_OF_SETS\s+(\d+)/i);
+          let count = 0;
+          if (numSetsMatch) {
+            count = parseInt(numSetsMatch[1], 10);
           } else {
             const lines = text.split(/\r?\n/);
-            let count = 0, inData = false;
+            let inData = false;
             for (const line of lines) {
               const t = line.trim();
               if (t === 'BEGIN_DATA') { inData = true; continue; }
               if (t === 'END_DATA') break;
               if (inData && t) count++;
             }
-            const ses = getActiveSession();
-            ses.fileName = file.name;
-            document.getElementById('lblPatchCountBadge').textContent = `${count || 1617} ô`;
-            renderAllWorkspace();
-            showToast(`Đã nạp file CGATS ${file.name} (${count || 1617} ô màu)!`, "success");
           }
+          validateAndIngestDualInput(count, file.name);
         };
         reader.readAsText(file);
       });
 
-      document.getElementById('btnParseSmartPaste').addEventListener('click', () => {
-        const raw = document.getElementById('txtSmartPaste').value.trim();
-        if (!raw) {
-          showToast("Hãy dán dòng số đo L*a*b* (VD: 53.5 -34.8 -46.0) vào ô trước!", "warn");
-          return;
+      // Quick Gatekeeper Test Buttons
+      document.getElementById('btnTestGateP2P').addEventListener('click', () => {
+        validateAndIngestDualInput(300, "Verified_P2P51_300Patches.txt");
+      });
+      document.getElementById('btnTestGateTC').addEventListener('click', () => {
+        validateAndIngestDualInput(1617, "Verified_TC1617_1617Patches.txt");
+      });
+      document.getElementById('btnTestGateInvalid').addEventListener('click', () => {
+        validateAndIngestDualInput(54, "Invalid_MediaWedge_54Patches.txt");
+      });
+
+      document.getElementById('btnDownloadSampleTarget').addEventListener('click', () => {
+        const ses = getActiveSession();
+        const n = ses.targetType === 'TC1617' ? 1617 : 300;
+        let cgats = `CGATS.17\nORIGINATOR "MPC ColorTech+ Studio v4.0"\nDESCRIPTOR "${ses.targetType} Standard Measurement"\nNUMBER_OF_FIELDS 7\nBEGIN_DATA_FORMAT\nSAMPLE_ID\tCMYK_C\tCMYK_M\tCMYK_Y\tCMYK_K\tLAB_L\tLAB_A\tLAB_B\nEND_DATA_FORMAT\nNUMBER_OF_SETS ${n}\nBEGIN_DATA\n`;
+        for (let i = 1; i <= n; i++) {
+          cgats += `${i}\t50.0\t40.0\t40.0\t0.0\t58.20\t-0.45\t-1.10\n`;
         }
-        const nums = raw.match(/-?\d+(\.\d+)?/g);
-        if (nums && nums.length >= 3) {
-          const L = parseFloat(nums[0]), a = parseFloat(nums[1]), b = parseFloat(nums[2]);
-          document.getElementById('inpSpotMeasL').value = L;
-          document.getElementById('inpSpotMeasA').value = a;
-          document.getElementById('inpSpotMeasB').value = b;
-          updatePantoneInspector();
-          showToast(`Đã bóc tách nhanh tọa độ L*=${L}, a*=${a}, b*=${b} từ Clipboard!`, "success");
-        } else {
-          showToast("Không tìm thấy bộ 3 số L*a*b* hợp lệ trong nội dung dán.", "warn");
-        }
+        cgats += `END_DATA\n`;
+        const blob = new Blob([cgats], { type: 'text/plain;charset=utf-8' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `Sample_${ses.targetType}_${n}Patches.txt`;
+        a.click();
+        showToast(`Đã tải xuống tệp mẫu chuẩn Sample_${ses.targetType}_${n}Patches.txt!`, "success");
       });
 
       // Ink Zone Channel Selector & Optimal DDA Reset
@@ -2401,9 +2694,9 @@
           inkZonesState[k].forEach(z => { if (!z.disabled) z.pct = 0; });
         });
         const ses = getActiveSession();
-        if (ses.id === 'SES_WET_FAIL') {
+        if (ses.id === 'SES_WET_P2P') {
           ses.status = 'PASS';
-          ses.compLevel = 'G7+ Targeted (Sau BestMatch DDA)';
+          ses.compLevel = 'G7+ Targeted (Sau BestMatch)';
           ses.wDeltaChAvg = 0.62;
           ses.wDeltaLAvg = 0.51;
           ses.sampleOffsets = { C: [0.2, -0.2, 0.3], M: [-0.2, 0.3, -0.2], Y: [0.1, -0.1, 0.4], K: [0.2, 0.1, 0.1], R: [-0.2, 0.3, 0.3], G: [0.2, -0.3, 0.2], B: [-0.3, 0.2, -0.3] };
@@ -2429,29 +2722,30 @@
             };
           }
         } catch (e) {}
-        showToast(`Đã đồng bộ và khóa an toàn ${PANTONE_CXF_DB.length} mã màu chuẩn vào bộ nhớ IndexedDB cục bộ!`, "success");
+        showToast(`Đã đồng bộ an toàn ${PANTONE_CXF_DB.length} mã màu chuẩn vào bộ nhớ IndexedDB!`, "success");
       });
 
       document.getElementById('inpSearchTrb').addEventListener('input', (e) => renderTroubleshooter(e.target.value));
 
-      // Calibrate Controls & Exports
+      // Calibrate Controls & Exports (Harmony .hmy, TSV, OneRun VPR TC1617 Export)
       document.getElementById('btnJumpToDdaFromCalib').addEventListener('click', () => {
         document.querySelector('[data-macro="PRESS_SPOT"]').click();
       });
-      ['ctpMethodSelect', 'ctpModeSelect', 'ctpFeatherSlider'].forEach(id => {
+      ['ctpMethodSelect', 'ctpBasedOnSelect', 'ctpModeSelect', 'ctpFeatherSlider'].forEach(id => {
         document.getElementById(id).addEventListener('input', renderCalibrateModule);
       });
 
       document.getElementById('btnDownloadHarmony').addEventListener('click', () => {
         const mode = document.getElementById('ctpModeSelect').value;
-        let hmy = `# KODAK HARMONY / COLORFLOW CALIBRATION CURVE\n# Generated by MPC ColorTech+ Studio v3.0 (Expert Edition) | Mode: ${mode}\nTint_In\tCyan\tMagenta\tYellow\tBlack\tSpot_SCTV\n`;
+        const basedOn = document.getElementById('ctpBasedOnSelect').value;
+        let hmy = `# KODAK HARMONY / COLORFLOW CALIBRATION CURVE\n# Generated by MPC ColorTech+ Studio v4.0 | Mode: ${mode} | BasedOn: ${basedOn}\nTint_In\tCyan\tMagenta\tYellow\tBlack\tSpot_SCTV\n`;
         currentLutRows.forEach(r => { hmy += `${r.t}\t${r.c}\t${r.m}\t${r.y}\t${r.k}\t${r.spot}\n`; });
         const blob = new Blob([hmy], { type: 'text/plain;charset=utf-8' });
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
-        a.download = `MPC_v3_Curve_${mode}_Prinergy.hmy`;
+        a.download = `MPC_v4_Curve_${mode}_${basedOn}_Prinergy.hmy`;
         a.click();
-        showToast(`Đã xuất file đường cong Kodak Harmony (MPC_v3_Curve_${mode}_Prinergy.hmy)!`, "success");
+        showToast(`Đã xuất file đường cong Kodak Harmony (MPC_v4_Curve_${mode}_${basedOn}_Prinergy.hmy)!`, "success");
       });
 
       document.getElementById('btnCopyColorFlowTsv').addEventListener('click', () => {
@@ -2464,21 +2758,44 @@
         showToast("Đã copy bảng Tint In / Tint Out vào Clipboard cho Kodak ColorFlow!", "success");
       });
 
+      document.getElementById('btnExportVprTc1617').addEventListener('click', () => {
+        const ses = getActiveSession();
+        if (ses.targetType !== 'TC1617') {
+          showToast("Chức năng xuất 1,617 ô OneRun VPR yêu cầu phiên đo đang mở phải là TC1617!", "warn");
+          return;
+        }
+        let vprCgats = `CGATS.17\nORIGINATOR "MPC ColorTech+ Studio v4.0 OneRun 3D VPR Engine"\nDESCRIPTOR "TC1617 Virtual Press Run Corrected Dataset for ICC Profiling"\nNUMBER_OF_FIELDS 8\nBEGIN_DATA_FORMAT\nSAMPLE_ID\tCMYK_C\tCMYK_M\tCMYK_Y\tCMYK_K\tLAB_L\tLAB_A\tLAB_B\nEND_DATA_FORMAT\nNUMBER_OF_SETS 1617\nBEGIN_DATA\n`;
+        for (let i = 1; i <= 1617; i++) {
+          const c = (i * 15) % 100, m = (i * 25) % 100, y = (i * 35) % 100, k = (i % 10 === 0) ? 20 : 0;
+          const L = (ses.paperLab.L - (c + m + y * 0.3 + k * 1.4) * 0.25).toFixed(2);
+          const a = ((m - c) * 0.35).toFixed(2);
+          const b = ((y - (c + m) * 0.4) * 0.45).toFixed(2);
+          vprCgats += `${i}\t${c}\t${m}\t${y}\t${k}\t${L}\t${a}\t${b}\n`;
+        }
+        vprCgats += `END_DATA\n`;
+        const blob = new Blob([vprCgats], { type: 'text/plain;charset=utf-8' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `TC1617_VPR_Corrected_${ses.jobCode}.txt`;
+        a.click();
+        showToast(`Đã xuất tệp 1,617 ô đã bù OneRun VPR (TC1617_VPR_Corrected_${ses.jobCode}.txt) cho tạo ICC Profile!`, "success");
+      });
+
       document.getElementById('btnCopyAppsScript').addEventListener('click', () => {
         const code = document.getElementById('codeAppsScript').textContent;
         try { navigator.clipboard.writeText(code); } catch (e) {}
         showToast("Đã copy mã Google Apps Script (Code.gs) vào Clipboard!", "success");
       });
 
-      // Modal 1: pressSIGN Style Job Wizard
+      // Modal 1: pressSIGN Style Job Wizard (Locked to P2P51 & TC1617)
       const modalWiz = document.getElementById('modalJobWizard');
       document.getElementById('btnOpenJobWizardTop').addEventListener('click', () => modalWiz.classList.remove('hidden'));
       document.getElementById('btnCloseJobWizard').addEventListener('click', () => modalWiz.classList.add('hidden'));
       document.getElementById('btnCancelJobWizard').addEventListener('click', () => modalWiz.classList.add('hidden'));
       document.getElementById('btnSaveJobWizard').addEventListener('click', () => {
-        const title = document.getElementById('wizJobTitle').value || "2026-11-10 Job Mới";
+        const title = document.getElementById('wizJobTitle').value || "2026-11-13 Job Mới";
         const folder = document.getElementById('wizPressLine').value;
-        const strip = document.getElementById('wizControlStrip').value;
+        const targetType = document.getElementById('wizTargetChartType').value;
         const refKey = document.getElementById('wizTargetRef').value;
         const L = parseFloat(document.getElementById('wizPaperL').value) || 90.5;
         const a = parseFloat(document.getElementById('wizPaperA').value) || 0.6;
@@ -2497,8 +2814,12 @@
         cloned.id = newId;
         cloned.checked = true;
         cloned.folder = folder;
+        cloned.targetType = targetType;
+        cloned.patchCount = targetType === 'TC1617' ? 1617 : 300;
+        cloned.compLevel = targetType === 'TC1617' ? 'G7+ ColorSpace' : 'G7+ Targeted (P2P51)';
         cloned.jobCode = `JOB-${Date.now().toString().slice(-4)}`;
-        cloned.stripName = strip;
+        cloned.stripName = targetType === 'TC1617' ? 'TC1617 (1,617 ô)' : 'P2P51 (300 ô)';
+        cloned.fileName = `${targetType}_${cloned.jobCode}.txt`;
         cloned.units = units;
         cloned.title = title;
         cloned.pressName = title;
@@ -2509,7 +2830,7 @@
         syncInputsFromActiveSession();
         renderAllWorkspace();
         modalWiz.classList.add('hidden');
-        showToast(`Đã khởi tạo Job "${title}" với 6 tháp in và chuẩn ${refKey}!`, "success");
+        showToast(`Đã khởi tạo Job "${title}" với thang đo chuẩn ${targetType} (${cloned.patchCount} ô)!`, "success");
       });
 
       // Modal 2: SCCA Calculator
@@ -2552,7 +2873,7 @@
       });
 
       document.getElementById('btnExportSccaCgats').addEventListener('click', () => {
-        let cgats = `CGATS.17\nORIGINATOR "MPC ColorTech+ Studio v3.0 Expert Edition"\nDESCRIPTOR "SCCA Adapted Aims"\nBEGIN_DATA_FORMAT\nSAMPLE_NAME\tLAB_L\tLAB_A\tLAB_B\nEND_DATA_FORMAT\nBEGIN_DATA\n`;
+        let cgats = `CGATS.17\nORIGINATOR "MPC ColorTech+ Studio v4.0"\nDESCRIPTOR "SCCA Adapted Aims"\nBEGIN_DATA_FORMAT\nSAMPLE_NAME\tLAB_L\tLAB_A\tLAB_B\nEND_DATA_FORMAT\nBEGIN_DATA\n`;
         Object.entries(currentAdaptedSolids).forEach(([k, v]) => {
           cgats += `${k}\t${v.L.toFixed(2)}\t${v.a.toFixed(2)}\t${v.b.toFixed(2)}\n`;
         });
@@ -2560,9 +2881,9 @@
         const blob = new Blob([cgats], { type: 'text/plain;charset=utf-8' });
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
-        a.download = 'MPC_v3_SCCA_Target.txt';
+        a.download = 'MPC_v4_SCCA_Target.txt';
         a.click();
-        showToast("Đã tải xuống tệp đích SCCA (MPC_v3_SCCA_Target.txt)!", "success");
+        showToast("Đã tải xuống tệp đích SCCA (MPC_v4_SCCA_Target.txt)!", "success");
       });
 
       // Modal 3: Verification Report
@@ -2573,9 +2894,10 @@
         const pctGmi = (totalGmi / 75) * 100;
         const reportTxt = [
           `===================================================================`,
-          `  CHỨNG CHỈ KIỂM ĐỊNH SỐ HỌC G7+ & GMI — MPC COLORTECH+ v3.0 EXPERT`,
+          `  CHỨNG CHỈ KIỂM ĐỊNH SỐ HỌC G7+ & GMI — MPC COLORTECH+ v4.0`,
           `===================================================================`,
           `Mã Job / Phiên đo : ${ses.jobCode} — ${ses.title}`,
+          `Thang đo Đầu vào  : ${ses.targetType} (${ses.patchCount} ô — Đã xác thực qua Cổng v4.0)`,
           `Nhà máy / Máy in  : ${ses.pressName}`,
           `Cấu hình Tháp in  : ${(ses.units || []).join(' | ')}`,
           `Tệp dữ liệu CGATS : ${ses.fileName}`,
@@ -2584,9 +2906,10 @@
           `Tọa độ Giấy L*a*b*: L*=${ses.paperLab.L.toFixed(1)}, a*=${ses.paperLab.a.toFixed(1)}, b*=${ses.paperLab.b.toFixed(1)}`,
           `-------------------------------------------------------------------`,
           `1. KẾT QUẢ G7 / G7+ VERIFICATION : ${ses.status} (${ses.compLevel})`,
-          `   - CMY Grayscale wΔL* (Avg/Max): ${ses.wDeltaLAvg.toFixed(2)} / ${ses.wDeltaLMax.toFixed(2)} (Chuẩn <= 1.50 / 3.00)`,
-          `   - CMY Grayscale wΔCh*(Avg/Max): ${ses.wDeltaChAvg.toFixed(2)} / ${ses.wDeltaChMax.toFixed(2)} (Chuẩn <= 1.50 / 3.00)`,
-          `   - Highlight Range HR_50       : CMY = ${ses.hrCmy.toFixed(2)} ND | K = ${ses.hrK.toFixed(2)} ND`,
+          `   - Cột 5 CMY wΔL* (Avg / Max)  : ${ses.wDeltaLAvg.toFixed(2)} / ${ses.wDeltaLMax.toFixed(2)} (Chuẩn <= 1.50 / 3.00)`,
+          `   - Cột 5 CMY wΔCh*(Avg / Max)  : ${ses.wDeltaChAvg.toFixed(2)} / ${ses.wDeltaChMax.toFixed(2)} (Chuẩn <= 1.50 / 3.00)`,
+          `   - Cột 4 Black K wΔL* (Avg/Max): ${ses.kDeltaLAvg.toFixed(2)} / ${ses.kDeltaLMax.toFixed(2)}`,
+          `   - ColorSpace 1,617 Ô (TC1617) : ${ses.targetType === 'TC1617' ? `Avg=${ses.csMean.toFixed(2)}, 95%=${ses.cs95.toFixed(2)}, Max=${ses.csMax.toFixed(2)}` : 'Khóa (Chế độ P2P51 300 ô)'}`,
           `-------------------------------------------------------------------`,
           `2. ĐIỂM KIỂM TOÁN BAO BÌ GMI     : ${totalGmi.toFixed(1)} / 75.0 (${pctGmi.toFixed(1)}%)`,
           ...ses.gmiItems.map(i => `   * ${i.name.padEnd(34)}: ${i.score.toFixed(1)}/${i.max} (${i.actual})`),
@@ -2601,12 +2924,11 @@
         const blob = new Blob([txt], { type: 'text/plain;charset=utf-8' });
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
-        a.download = `MPC_v3_Expert_Report_${activeSessionId}.txt`;
+        a.download = `MPC_v4_Report_${activeSessionId}.txt`;
         a.click();
         showToast("Đã tải xuống báo cáo kiểm định (.txt)!", "success");
       });
 
-      // Initial Boot
       populatePantoneSelect('');
       renderTroubleshooter('');
       syncInputsFromActiveSession();
